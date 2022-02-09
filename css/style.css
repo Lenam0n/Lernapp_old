@@ -104,6 +104,22 @@ section{
     border-radius: 15px;
 
 }
+.button-style-3{
+    background-color: lightsalmon;
+    font-weight: 500;
+    font-size: 22px;
+    width: 200px;
+    height: 75px;
+    color: #fff;
+    border-radius: 15px;
+    box-shadow: 3px 2px 4px 2px grey;
+    transition: all ease-in 200ms;
+
+}
+.button-style-3:hover{
+    background-color: rgb(206, 66, 11);
+    
+}
 /* content */
 
 /* Headbar */
@@ -130,6 +146,10 @@ section{
     border: solid 5px;
   -moz-border-radius: 50px;
        border-radius: 50px;
+}
+#startBox{
+    justify-content: center;
+    align-items: center;
 }
 .bg-count{
     background-color: darkgrey;

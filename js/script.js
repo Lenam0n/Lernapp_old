@@ -143,7 +143,7 @@ function buttonBuilder2() {
 }
 function SonderStateButtonBuilder() {
     let button = document.createElement("button");
-    button.setAttribute("class","button-style-3");
+    button.setAttribute("class","center button-style-3");
     button.setAttribute("id","refreshable");
     button.innerText ="restart Guessing Game";
     button.setAttribute("onclick","restartGame()");
@@ -153,7 +153,7 @@ function startGameButtonBuilder() {
     let button = document.createElement("button");
     button.setAttribute("class","button-style-3");
     button.setAttribute("onclick","gameStart()");
-    button.innerText ="start the Guessing Game";
+    button.innerText ="Start The Guessing Game";
     return button;
 }
 
