@@ -113,7 +113,7 @@ section{
     color: #fff;
     border-radius: 15px;
     box-shadow: 3px 2px 4px 2px grey;
-    transition: all ease-in 200ms;
+    transition: all ease-in 400ms;
 
 }
 .button-style-3:hover{
