@@ -112,20 +112,38 @@ section{
     justify-content: center;
 }
 #headbar > div > p{
+    margin-top: 0px;
+    position: absolute;
     color: black;
+    font-size: 40px;
+    z-index: 10;
 }
-#headbar > div{
+#headbar div{
     display: flex;
     justify-content: center;
-    align-items: center;
-    background-color: #838386;
+    text-align: center;
+    margin-inline: 10em;
     width: 4em;
     height: 3em;
     margin-top: 1em;
     margin-bottom: 2em;
-    border: solid 10px;
+    border: solid 5px;
   -moz-border-radius: 50px;
        border-radius: 50px;
+}
+.bg-count{
+    background-color: darkgrey;
+}
+.bg-score{
+    background-color: lightskyblue;
+} 
+.overlay{
+    margin-top: 5px;
+    font-size: 30px;
+    opacity: 0.5;
+    z-index: 1;
+    border-radius: 50%;
+    border: transparent 5px;
 }
 /* Fragen Anzeige */
 #fragen-anzeige{

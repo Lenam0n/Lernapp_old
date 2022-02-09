@@ -17,7 +17,9 @@ var button3;
 var button4;   
 
 var punkte = document.getElementById("punkte");
+var fragencount = document.getElementById("fragenCount");
 var score = 0;
+var fragencounter = 0;
 
 
 function checkForPoints(event) {
@@ -27,15 +29,19 @@ function checkForPoints(event) {
 
     if (targetVal === questions[0].correct){
         score += 10;
+        fragencounter += 1;
         punkte.innerText = score;
+        fragencount.innerText = fragencounter;
         questions.shift();
         insideBuilder();
 
     }else{
         score -= 10;
+        fragencounter += 1;  
         punkte.innerText = score;
+        fragencount.innerText = fragencounter;
         alert("falsche Aussage!");  
-        questions.shift();  
+        questions.shift();
         insideBuilder();  
     }
 }
@@ -70,6 +76,7 @@ function restartGame() {
     document.getElementById("question-gerne").style["opacity"] = 1;
     score = 0;
     punkte.innerText = score;
+    fragencount.innerText = fragencounter;
     LoadMyJs('js/datenbank.js'); 
     fragenAnzeige.style["height"] = "10em";
     deleteAfterReload = document.querySelectorAll(".deleteAfterReload");
@@ -173,6 +180,7 @@ function gameStartBuilder() {
     
     document.getElementById("question-gerne").style["opacity"] = 0;
     punkte.innerText = score;
+    fragencount.innerText = fragencounter;
     var div = document.createElement("div");
     Object.entries( { id : 'startBox' , class : 'flex TransformableDiv' } ).forEach( ( [ key , value ] ) => div.setAttribute( key , value ) );
     section.appendChild(div);    
@@ -182,7 +190,7 @@ function gameStartBuilder() {
 
 function insideBuilder() {
     if (section.hasChildNodes()) deleteTransformDiv();
-    if (questions.length === 0) { 
+    if (questions.length === 0 || fragencounter === 10) { 
 
         document.getElementById("question-gerne").style["opacity"] = 0;
         questionGerne.innerText = "";
