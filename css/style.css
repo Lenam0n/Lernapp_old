@@ -62,6 +62,7 @@ section{
 .wrapper{
     width: 100%;
     max-width: 1200px;
+    height: 850px;
     background-color: #d64141;
     outline: 2px solid black;
 
@@ -130,17 +131,19 @@ section{
 #fragen-anzeige{
     height: 10em;
     padding-bottom: 2em;
-
-}
-.question-bg{
     background-color: #f8f8ff;
     border: 1px transparent;
     border-radius: 16px;
     width: 50em;
-    height: 10em;
+    margin-bottom: 2em;
+}
+
+.question-bg{
+
     
 }
 #question-gerne{
+    padding-top: 0.7em;
     border-bottom-left-radius: 50px;
     border-bottom-right-radius: 50px;
     color:#fff;
@@ -163,15 +166,18 @@ section{
 }
 
 .question{
-    margin-top: 70px;
+    margin-top: 6.2em;
     text-align: center;
 }
 
 /* colorThemes */
-.Serie{background-color: rgba(95, 158, 160, 0.603);}
+.Serien{background-color: rgba(95, 158, 160, 0.603);}
 .Media{background-color:rgba(80, 70, 10, 1)}
-.Nawi{}
-.Books{}
+.Nawi{background-color:rgb(19, 129, 62);}
+.AllgemeinWissen{background-color: rgb(216, 153, 36);}
+.Filme{background-color: rgba(25, 47, 48, 0.603);}
+.Erdkunde{background-color: rgba(105, 50, 19, 0.603);}
+.Mathe{background-color: rgba(243, 17, 17, 0.603);}
 
 
 /* antworten Multible Choise */

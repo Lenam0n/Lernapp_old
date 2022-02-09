@@ -1,9 +1,13 @@
+function test(param) {
+    console.log(param || "test");
+}
+
 const container = document.getElementById("inside-changer");
-const chooseType = document.getElementById("chooseType");
-const submitButton = document.getElementsByTagName("input")[1];
 const section = document.createElement("Section");
 const question = document.getElementsByClassName("question")[0];
 const questionGerne = document.getElementById("question-gerne");
+const fragenAnzeige = document.getElementById("fragen-anzeige");
+const upperText = document.getElementById("upper-Text");
 
 var allButtons;
 var targetVal;
@@ -18,12 +22,8 @@ var score = 0;
 
 function checkForPoints(event) {
         targetVal = event.target.innerText;
-        
-        if (targetVal === "Submit")
+    if (targetVal === "Submit")
         {targetVal = document.getElementById("inputOfGq").value;}
-        
-        console.log(targetVal);
-        console.log(questions[0].correct);
 
     if (targetVal === questions[0].correct){
         score += 10;
@@ -41,32 +41,84 @@ function checkForPoints(event) {
 }
 
 
-function shuffle() {
-    let currentIndex = questions.length,  randomIndex;
+function shuffle(array) {
+    let currentIndex = array.length,  randomIndex;
   
     while (currentIndex != 0) {
       randomIndex = Math.floor(Math.random() * currentIndex);
       currentIndex--;
 
-      [questions[currentIndex], questions[randomIndex]] = [
-        questions[randomIndex], questions[currentIndex]];
+      [array[currentIndex], array[randomIndex]] = [
+        array[randomIndex], array[currentIndex]];
     }
     
     return questions[0];
   }
 
+function deleteTransformDiv() {
+    var el = document.getElementsByClassName("TransformableDiv")[0];
+    if (el.id = "antworten-tf" || "antworten-mc" || "antworten-gq" || "startBox") el.remove();
+}
+
+function EnterRun(event){
+    if(event.keyCode == 13) {
+        checkForPoints();
+    }
+}
+
+function restartGame() {
+    document.getElementById("question-gerne").style["opacity"] = 1;
+    score = 0;
+    punkte.innerText = score;
+    LoadMyJs('js/datenbank.js'); 
+    fragenAnzeige.style["height"] = "10em";
+    deleteAfterReload = document.querySelectorAll(".deleteAfterReload");
+    deleteTextAreas(deleteAfterReload);
+    insideBuilder(); 
+}
+
+function deleteTextAreas(uniqueDeleteClass) {
+    for (let i = 0; i < uniqueDeleteClass.length; i++) {
+        uniqueDeleteClass[i].remove();}
+    }
+
+function LoadMyJs(scriptName) {
+    var header = document.getElementsByTagName("head")[0];
+    var refreshedScript = document.createElement("script");
+    refreshedScript.type = "text/javascript";
+    refreshedScript.src = scriptName;
+    header.appendChild(refreshedScript);
+    }
+
+    
+function gameStartTextBuilder() {
+    var h2 = document.createElement("h2");
+    h2.setAttribute("id" , "gameStartHeader")
+    h2.setAttribute("class" , "deleteAfterPress")
+    h2.style["margin-top"] = "3em";
+    h2.innerText = "Are You ready to enter the Guessing Game"
+    return h2;
+}
 
 function gameOverTextBuilder() {
-    let upperText = document.getElementById("upper-Text");
     var h2 = document.createElement("h2");
-    h2.setAttribute("id" , "gameOverHeader")
+    h2.setAttribute("class" , "deleteAfterReload")
     h2.innerText = "Game Over"
     return h2;
+}
+
+function gameOverScoreTextBuilder() {
+    var h4 = document.createElement("h4");
+    h4.setAttribute("class" , "center  deleteAfterReload")
+    h4.innerText = score;
+    return h4;
 }
 
 function questionBuilder() {
     questionGerne.innerText = questions[0].questionType;
     question.innerText = questions[0].question;
+    questionGerne.setAttribute("class", questions[0].questionType)
+    questionGerne.innerText = questions[0].questionType
 }
 
 function buttonBuilder1() {
@@ -78,15 +130,23 @@ function buttonBuilder1() {
 function buttonBuilder2() {
     let button = document.createElement("button");
     button.setAttribute("class","answer button-style-2");   
-    button.innerText ="Submit";
-    button.setAttribute("onclick","checkForPoints()");  
+    button.innerText ="Submit"; 
+    button.addEventListener("keypress",EnterRun);
     return button;
 }
 function SonderStateButtonBuilder() {
     let button = document.createElement("button");
     button.setAttribute("class","button-style-3");
-    button.setAttribute("onclick","insideBuilder() , score = 0");
+    button.setAttribute("id","refreshable");
     button.innerText ="restart Guessing Game";
+    button.setAttribute("onclick","restartGame()");
+    return button;
+}
+function startGameButtonBuilder() {
+    let button = document.createElement("button");
+    button.setAttribute("class","button-style-3");
+    button.setAttribute("onclick","gameStart()");
+    button.innerText ="start the Guessing Game";
     return button;
 }
 
@@ -99,27 +159,47 @@ function inputBuilder() {
     return input;
 }
 
-function insideBuilder() {
-    if (!container.hasChildNodes()) container.appendChild(section);
+function gameStart() {
+    deleteAfterPress = document.querySelectorAll(".deleteAfterPress");
+    deleteTextAreas(deleteAfterPress); 
+    insideBuilder();
+}
 
+function gameStartBuilder() {
+    if (!container.hasChildNodes()) container.appendChild(section);
+    if (section.hasChildNodes()) deleteTransformDiv();
+
+    upperText.appendChild(gameStartTextBuilder());    
+    
+    document.getElementById("question-gerne").style["opacity"] = 0;
+    punkte.innerText = score;
+    var div = document.createElement("div");
+    Object.entries( { id : 'startBox' , class : 'flex TransformableDiv' } ).forEach( ( [ key , value ] ) => div.setAttribute( key , value ) );
+    section.appendChild(div);    
+    div.appendChild( startGameButtonBuilder() );
+    
+}
+
+function insideBuilder() {
+    if (section.hasChildNodes()) deleteTransformDiv();
     if (questions.length === 0) { 
-        if (section.hasChildNodes()) deleteTransformDiv();
 
         document.getElementById("question-gerne").style["opacity"] = 0;
         questionGerne.innerText = "";
         question.innerText = "";
 
         var div = document.createElement("div");
-        Object.entries( { id : 'gameOverScreen' , class : 'flex gameover' } ).forEach( ( [ key , value ] ) => div.setAttribute( key , value ) );
+        Object.entries( { id : 'gameOverScreen' , class : 'TransformableDiv gameover' } ).forEach( ( [ key , value ] ) => div.setAttribute( key , value ) );
         section.appendChild(div);
         div.appendChild( SonderStateButtonBuilder() );
-
-
-
+        upperText.appendChild(gameOverTextBuilder());
+        upperText.appendChild(gameOverScoreTextBuilder());
+        fragenAnzeige.style["height"] = "20em";
+        return;
         
     }
-
-    shuffle();
+    document.getElementById("question-gerne").style["opacity"] = 1;
+    shuffle(questions);
 
     switch(questions[0].type){
         case "mc":
@@ -142,6 +222,8 @@ function insideBuilder() {
             button3 = document.getElementsByTagName("button")[2];   
             button4 = document.getElementsByTagName("button")[3];  
 
+            shuffle(questions[0].choices);
+
             button1.innerHTML = questions[0].choices[0]; 
             button2.innerHTML = questions[0].choices[1];
             button3.innerHTML = questions[0].choices[2];
@@ -152,7 +234,6 @@ function insideBuilder() {
             for (let i = 0; i < allButtons.length; i++) {
                 allButtons[i].addEventListener("click", checkForPoints);
             }
-
 
             
 
@@ -205,29 +286,15 @@ function insideBuilder() {
                 allButtons[i].addEventListener("click", checkForPoints);
             }
 
+            
+
             break;
     }
     
 }
 
-function deleteTransformDiv() {
-
-    var el = document.getElementsByClassName("TransformableDiv")[0];
-    if (el.id = "antworten-tf" || "antworten-mc" || "antworten-gq") el.remove();
-}
-
-function EnterRun(event){
-    if(event.keyCode == 13) {
-        insideBuilder();
-    }
-}
-
-submitButton.addEventListener("click" ,insideBuilder);
-chooseType.addEventListener("keypress",EnterRun);
-window.addEventListener("load", insideBuilder);
+window.addEventListener("load", gameStartBuilder);
 
 
-    function test(p) {
-        console.log(p || "test");
-    }
+
 

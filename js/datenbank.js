@@ -1,26 +1,26 @@
 var questions =  
         [{ 
             type : 'mc' , 
-            questionType: 'Serien' ,
+            questionType: 'Filme' ,
             question : 'Wie heißt der Bösewicht in der Buchreihe "Harry Potter"?' , 
             choices : [ 'Lord Voldemort' , 'Darth Vader' , 'Winnie Puh' , 'Gandalf' ] , 
             correct : 'Lord Voldemort' ,
             } , 
 		{ 
             type : 'tf' , 
-            questionType: 'Serien' ,
+            questionType: 'Filme' ,
             question : 'Stirbt Dumbledore?' , 
-            choices : [ 'true', 'false'],
-            correct : 'true' } , 
+            choices : [ 'Ja', 'Nein'],
+            correct : 'Ja' } , 
 		{ 
             type : 'mc' , 
-            questionType: 'Serien' ,
+            questionType: 'Filme' ,
             question : 'Wo leben Hobbits?' , 
             choices : [ 'Nimmerland' , 'Auenland' , 'AsSerienban' , 'Mordor' ] , 
             correct : 'Auenland' } , 
 		{ 
             type : 'mc' , 
-            questionType: 'Serien' ,
+            questionType: 'Filme' ,
             question : 'Wer findet den einen Ring?' , 
             choices : [ 'Smeargol' , 'Harry Potter' , 'Winnie Puh' , 'Luke Skywalker' ] , 
             correct : 'Smeargol' } , 
@@ -31,72 +31,19 @@ var questions =
             choices : [ 'Smeargol' , 'Harry Potter' , 'Winnie Puh' , 'Luke Skywalker' ] , 
             correct : 'Winnie Puh' } , 
 		{ 
+            type : 'mc' , 
+            questionType: 'Nawi' ,
+            question : 'Was ist ein Atombestandteil?' , 
+            choices : [ 'Boson' , 'Neuton' , 'Neutrinum' , 'Tachion' ] , 
+            correct : 'Neuton' } , 
+		{ 
             type : 'gq' , 
-            questionType: 'Serien' ,
-            question : 'Wieviele Sekunden hat ein Tag' , 
-            correct : 86400 }];
-	/* ,
-    [
-        {
-            type : '' , 
-            question : '' , 
-            choices : [ '' ] , 
-            correct : 0
-        },
-        {
-            type : '' , 
-            question : '' , 
-            choices : [ '' ] , 
-            correct : 0
-        },
-        {
-            type : '' , 
-            question : '' , 
-            choices : [ '' ] , 
-            correct : 0
-        },
-        {
-            type : '' , 
-            question : '' , 
-            choices : [ '' ] , 
-            correct : 0
-        },
-    ],
-    'Naturwissenschaften' : [
-        {
-            type : '' , 
-            question : '' , 
-            choices : [ '' ] , 
-            correct : 0
-        },
-        {
-            type : '' , 
-            question : '' , 
-            choices : [ '' ] , 
-            correct : 0
-        },
-        {
-            type : '' , 
-            question : '' , 
-            choices : [ '' ] , 
-            correct : 0
-        }
-    ],
-    'Bücher und Wörter' : [
-        {
-            type : '' , 
-            question : '' , 
-            choices : [ '' ] , 
-            correct : 0
-        }, {
-            type : '' , 
-            question : '' , 
-            choices : [ '' ] , 
-            correct : 0
-        }, {
-            type : '' , 
-            question : '' , 
-            choices : [ '' ] , 
-            correct : 0
-        }
-    ] */
+            questionType: 'Mathe' ,
+            question : 'Was ist 1.5 x 10²?' , 
+            correct : '150' } , 
+		{ 
+            type : 'gq' , 
+            questionType: 'AllgemeinWissen' ,
+            question : 'Wieviele Sekunden hat ein Tag?' , 
+            correct : '86400' }
+        ];
