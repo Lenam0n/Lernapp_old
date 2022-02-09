@@ -34,8 +34,8 @@ var questions =
             type : 'mc' , 
             questionType: 'Nawi' ,
             question : 'Was ist ein Atombestandteil?' , 
-            choices : [ 'Boson' , 'Neuton' , 'Neutrinum' , 'Tachion' ] , 
-            correct : 'Neuton' } , 
+            choices : [ 'Boson' , 'Neutron' , 'Neutrinum' , 'Tachion' ] , 
+            correct : 'Neutron' } , 
 		{ 
             type : 'gq' , 
             questionType: 'Mathe' ,

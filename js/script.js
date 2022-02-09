@@ -58,7 +58,7 @@ function shuffle(array) {
         array[randomIndex], array[currentIndex]];
     }
     
-    return questions[0];
+    return array[0];
   }
 
 function deleteTransformDiv() {
