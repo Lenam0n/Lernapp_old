@@ -167,12 +167,13 @@ section{
 }
 /* Fragen Anzeige */
 #fragen-anzeige{
+    margin-inline: auto;
     height: 10em;
     padding-bottom: 2em;
     background-color: #f8f8ff;
     border: 1px transparent;
     border-radius: 16px;
-    width: 50em;
+    width: 700px;
     margin-bottom: 2em;
 }
 
