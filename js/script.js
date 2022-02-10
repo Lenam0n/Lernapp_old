@@ -46,6 +46,12 @@ function checkForPoints(event) {
     }
 }
 
+function checkForCorrect(event) {
+    if (targetVal === questions[0].correct){
+        event.target.setAttribute("class" , "correct");}
+    else{
+        event.target.setAttribute.setAttribute("class" , "wrong");
+}
 
 function shuffle(array) {
     let currentIndex = array.length,  randomIndex;
@@ -217,7 +223,7 @@ function insideBuilder() {
         
     }
     document.getElementById("question-gerne").style["opacity"] = 1;
-    
+
     shuffle(questions);
 
     upperText.style["flex-direction"] = "row";
