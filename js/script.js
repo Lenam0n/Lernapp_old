@@ -210,8 +210,8 @@ function insideBuilder() {
         div.appendChild( SonderStateButtonBuilder() );
         upperText.appendChild(gameOverTextBuilder());
         upperText.appendChild(gameOverScoreTextBuilder());
-        upperText.style["flex-direction"] =: "column";
-        upperText.style["margin-top"] =: "2em";
+        upperText.style["flex-direction"] = "column";
+        upperText.style["margin-top"] = "2em";
         fragenAnzeige.style["height"] = "20em";
         return;
         
