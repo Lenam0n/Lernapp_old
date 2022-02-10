@@ -75,6 +75,7 @@ function EnterRun(event){
 function restartGame() {
     document.getElementById("question-gerne").style["opacity"] = 1;
     score = 0;
+    fragencounter += 1;
     punkte.innerText = score;
     fragencount.innerText = fragencounter;
     LoadMyJs('js/datenbank.js'); 
@@ -191,6 +192,7 @@ function gameStartBuilder() {
 function insideBuilder() {
     if (section.hasChildNodes()) deleteTransformDiv();
     if (questions.length === 0 || fragencounter === 10) { 
+        fragencounter = 0;
 
         document.getElementById("question-gerne").style["opacity"] = 0;
         questionGerne.innerText = "";
