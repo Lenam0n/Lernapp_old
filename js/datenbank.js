@@ -4,8 +4,7 @@ var questions =
             questionType: 'Bücher' ,
             question : 'Wie heißt der Bösewicht in der Buchreihe "Harry Potter"?' , 
             choices : [ 'Lord Voldemort' , 'Darth Vader' , 'Winnie Puh' , 'Gandalf' ] , 
-            correct : 'Lord Voldemort' ,
-            } , 
+            correct : 'Lord Voldemort' } , 
 		{ 
             type : 'tf' , 
             questionType: 'Filme' ,
@@ -42,8 +41,120 @@ var questions =
             question : 'Was ist 1.5 x 10²?' , 
             correct : '150' } , 
 		{ 
+            type : 'mc' , 
+            questionType: 'Politik' ,
+            question : 'Wer wählt den Bundespräsidenten?' , 
+            choices : [ 'Der Bundeskanzler' , 'Der Bundesrat' , 'Der Bundestag' , 'Die Bundesversammlung' ] , 
+            correct : 'Die Bundesversammlung' } , 
+		{ 
             type : 'gq' , 
             questionType: 'AllgemeinWissen' ,
             question : 'Wieviele Sekunden hat ein Tag?' , 
-            correct : '86400' }
-        ];
+            correct : '86400' } ,
+            {
+            type : 'mc' , 
+            questionType: 'Politik' ,
+            question : 'Wie alt muss der Bundespräsident mindestens sein?' , 
+            choices  : [ '18 Jahre alt' , '30 Jahre alt' , '40 Jahre alt' , '50 Jahre alt' ] , 
+            correct : '40 Jahre alt' } , 
+            {
+            type : 'gq' , 
+            questionType: 'Mathe' ,
+            question : 'Vervollständigen Sie die Zahlenreihe: 1 – 5 – 3 – 12 – 10 – 30 – 28 – ?' , 
+            correct : '56' } , 
+            {
+            type : 'mc' , 
+            questionType: 'Logik' ,
+            question : 'Welches Wort passt nicht zu den anderen?' , 
+            choices : [ 'scharf' , 'sauer' , 'süß' , 'salzig' ] , 
+            correct : 'scharf' } ,
+            {
+            type : 'mc' , 
+            questionType: 'Politik' ,
+            question : 'Welche Wirtschaftsordnung hat die Bundesrepublik Deutschland?' , 
+            choices : [ 'Kapitalismus' , 'Soziale Marktwirtschaft' , 'Freie Marktwirtschaft' , ' Planwirtschaft' ] , 
+            correct : 'Soziale Marktwirtschaft' } ,
+            {
+            type : 'mc' , 
+            questionType: 'Politik' ,
+            question : 'Zu welchem Begriff passt die Definition: „Es misst die Produktion von Waren und Dienstleistungen im Inland nach Abzug aller Vorleistungen“?' , 
+            choices : [ 'Bruttoinlandsprodukt' , 'Bruttonationalprodukt' , 'Bruttosozialprodukt' , 'Bruttowertschöpfungsprodukt' ] , 
+            correct : 'Bruttoinlandsprodukt' } ,
+            {
+            type : 'mc' , 
+            questionType: 'AllgemeinWissen' ,
+            question : 'In welchem Jahrhundert wurde Johann Wolfgang von Goethe geboren?' , 
+            choices : [ '16. Jahrhundert' , '17. Jahrhundert' , '18. Jahrhundert' , '19. Jahrhundert' ] , 
+            correct : '18. Jahrhundert' } ,
+            {
+            type : 'mc' , 
+            questionType: 'Logik' ,
+            question : 'Welche Stadt passt nicht zu den anderen?' , 
+            choices : [ 'München' , 'Düsseldorf' , 'Frankfurt' , 'Schwerin' ] , 
+            correct : 'Frankfurt' } ,
+            {
+            type : 'mc' , 
+            questionType: 'Logik' ,
+            question : 'Wie viele Meter sind 25.000 Millimeter?' , 
+            choices : [ '2,5 Meter' , '25 Meter' , '250 Meter' , '2.500 Meter' ] , 
+            correct : '25 Meter' } ,
+            {
+            type : 'mc' , 
+            questionType: 'Mathe' ,
+            question : 'Wie viele Sekunden ergeben insgesamt 13,5 Minuten?' , 
+            choices : [ '630 Sekunden' , '720 Sekunden' , '810 Sekunden' , '890 Sekunden' ] , 
+            correct : '810 Sekunden' } ,
+            {
+            type : 'mc' , 
+            questionType: 'AllgemeinWissen' ,
+            question : 'Was bedeutet „Inflation“?' , 
+            choices : [ 'Verringerung der Kaufkraft des Geldes' , 'Stabilisierung des Preisniveaus' , 'Senkungen der Preise' , 'Stärkung der Konjunktur' ] , 
+            correct : 'Verringerung der Kaufkraft des Geldes' } ,
+            {
+            type : 'mc' , 
+            questionType: 'Nawi' ,
+            question : 'Wie viele Planeten hat unser Sonnensystem?' , 
+            choices : [ '6' , '7' , '8' , '9' ] , 
+            correct : '8' } ,
+            {
+            type : 'mc' , 
+            questionType: 'Nawi' ,
+            question : 'Wie viel Blut sind durchschnittlich im menschlichen Körper?' , 
+            choices : [ 'bis zu 3 Liter' , '5 bis 6 Liter' , '8 bis 10 Liter' , '12 bis 14 Liter' ] , 
+            correct : '5 bis 6 Liter' } ,
+                                                                  /*  */
+            {
+            type : 'gq' , 
+            questionType: 'AllgemeinWissen' ,
+            question : 'Was ist das Gegenteil von „generös“?' , 
+            correct : 'geizig' } ,
+            {
+            type : 'mc' , 
+            questionType: 'Nawi' ,
+            question : 'Welche Rechtschreibung ist korrekt?' , 
+            choices : [ 'Akupunktur' , 'Akkupunktur' , 'Ackupunktur' , 'Akupuncktur' ] , 
+            correct : 'Akupunktur' } ,
+            {
+            type : 'mc' , 
+            questionType: 'AllgemeinWissen' ,
+            question : 'Beim Kauf eines Fernsehers zahlen Sie für die Mehrwertsteuer (19 Prozent) insgesamt 95 Euro. Wie teuer war der Fernseher netto – also ohne die Steuer?' , 
+            choices : [ '400 Euro' , '450 Euro' , '500 Euro' , '550 Euro' ] , 
+            correct : '500 Euro' } ,
+            {
+            type : 'mc' , 
+            questionType: 'Nawi' ,
+            question : 'Wie viele Bit sind ein Byte?' , 
+            choices : [ '4' , '8' , '16' , '32' ] , 
+            correct : '4' } ,
+            {
+            type : 'mc' , 
+            questionType: 'Erdkunde' ,
+            question : 'Wie heißt der größte See Deutschlands?' , 
+            choices : [ 'Bodensee' , 'Chiemsee' , 'Ammersee' , 'Starnberger See' ] , 
+            correct : 'Bodensee' } ,
+            {
+            type : 'gq' , 
+            questionType: 'Nawi' ,
+            question : 'Nennen Sie eine Naturwissenschaften.' , 
+            correct : 'Biologie' || 'Physik'|| 'Chemie' || 'Astronomie' || 'Geowissenschaften'} ,
+      ];

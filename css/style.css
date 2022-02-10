@@ -43,7 +43,8 @@ header nav > ul > li > a {}
 header#Main { position: relative; }
 
 section{
-    outline: 2px solid black;
+    border-radius: 15px;
+    border: solid black 2px;
     margin-bottom: 3.5em;
 }
 
@@ -60,6 +61,8 @@ section{
     background: url(../img/bg.jpg);
 }
 .wrapper{
+    border-radius: 4%;
+    border: transparent 1px;
     width: 100%;
     max-width: 1200px;
     height: 850px;
@@ -220,6 +223,8 @@ section{
 .Erdkunde{background-color: rgba(105, 50, 19, 0.603);}
 .Mathe{background-color: rgba(243, 17, 17, 0.603);}
 .Bücher{background-color: rgba(13, 24, 175, 0.603);}
+.Logik{background-color: rgba(124, 223, 79, 0.603);}
+.Politik{background-color: rgba(28, 212, 166, 0.603);}
 
 
 /* antworten Multible Choise */

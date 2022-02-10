@@ -46,13 +46,6 @@ function checkForPoints(event) {
     }
 }
 
-function checkForCorrect(event) {
-    if (targetVal === questions[0].correct){
-        event.target.setAttribute("class" , "correct");}
-    else{
-        event.target.setAttribute.setAttribute("class" , "wrong");
-}
-
 function shuffle(array) {
     let currentIndex = array.length,  randomIndex;
   
@@ -81,13 +74,13 @@ function EnterRun(event){
 function restartGame() {
     document.getElementById("question-gerne").style["opacity"] = 1;
     score = 0;
-    fragencounter += 1;
+    fragencounter = 0;
     punkte.innerText = score;
     fragencount.innerText = fragencounter;
     LoadMyJs('js/datenbank.js'); 
     fragenAnzeige.style["height"] = "10em";
     upperText.style["flex-direction"] = "row";
-    upperText.style["margin-top"] = "2em";
+    upperText.style["margin-top"] = "0";
     deleteAfterReload = document.querySelectorAll(".deleteAfterReload");
     deleteTextAreas(deleteAfterReload);
     insideBuilder(); 
@@ -154,7 +147,7 @@ function SonderStateButtonBuilder() {
     let button = document.createElement("button");
     button.setAttribute("class","center button-style-3");
     button.setAttribute("id","refreshable");
-    button.innerText ="restart Guessing Game";
+    button.innerText ="Restart";
     button.setAttribute("onclick","restartGame()");
     return button;
 }
@@ -180,6 +173,7 @@ function gameStart() {
     deleteTextAreas(deleteAfterPress); 
     upperText.style["flex-direction"] = "row";
     upperText.style["margin-top"] = 0;
+    fragencounter = 0;
     insideBuilder();
 }
 
@@ -202,8 +196,7 @@ function gameStartBuilder() {
 function insideBuilder() {
     if (section.hasChildNodes()) deleteTransformDiv();
     if (questions.length === 0 || fragencounter === 10) { 
-        fragencounter = 0;
-
+        
         
         
         document.getElementById("question-gerne").style["opacity"] = 0;
@@ -211,7 +204,7 @@ function insideBuilder() {
         question.innerText = "";
         
         var div = document.createElement("div");
-        Object.entries( { id : 'gameOverScreen' , class : 'TransformableDiv gameover' } ).forEach( ( [ key , value ] ) => div.setAttribute( key , value ) );
+        Object.entries( { id : 'gameOverScreen' , class : 'TransformableDiv gameover center' } ).forEach( ( [ key , value ] ) => div.setAttribute( key , value ) );
         section.appendChild(div);
         div.appendChild( SonderStateButtonBuilder() );
         upperText.appendChild(gameOverTextBuilder());
@@ -219,6 +212,7 @@ function insideBuilder() {
         upperText.style["flex-direction"] = "column";
         upperText.style["margin-top"] = "2em";
         fragenAnzeige.style["height"] = "20em";
+        fragencounter = 0;
         return;
         
     }
@@ -325,7 +319,5 @@ function insideBuilder() {
 }
 
 window.addEventListener("load", gameStartBuilder);
-
-
 
 
