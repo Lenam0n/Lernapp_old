@@ -267,8 +267,12 @@ function insideBuilder() {
             button1 = document.getElementsByTagName("button")[0];   
             button2 = document.getElementsByTagName("button")[1];   
 
+            shuffle(questions[0].choices);
+            
             button1.innerHTML = questions[0].choices[0]; 
             button2.innerHTML = questions[0].choices[1];
+            
+
 
             allButtons = document.querySelectorAll("button");
 
