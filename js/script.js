@@ -196,16 +196,19 @@ function insideBuilder() {
     if (questions.length === 0 || fragencounter === 10) { 
         fragencounter = 0;
 
+        
+        
         document.getElementById("question-gerne").style["opacity"] = 0;
         questionGerne.innerText = "";
         question.innerText = "";
-
+        
         var div = document.createElement("div");
         Object.entries( { id : 'gameOverScreen' , class : 'TransformableDiv gameover' } ).forEach( ( [ key , value ] ) => div.setAttribute( key , value ) );
         section.appendChild(div);
         div.appendChild( SonderStateButtonBuilder() );
         upperText.appendChild(gameOverTextBuilder());
         upperText.appendChild(gameOverScoreTextBuilder());
+        upperText.style["flex-direction"] =: "column";
         fragenAnzeige.style["height"] = "20em";
         return;
         
