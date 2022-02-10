@@ -1,7 +1,7 @@
 var questions =  
         [{ 
             type : 'mc' , 
-            questionType: 'Filme' ,
+            questionType: 'Bücher' ,
             question : 'Wie heißt der Bösewicht in der Buchreihe "Harry Potter"?' , 
             choices : [ 'Lord Voldemort' , 'Darth Vader' , 'Winnie Puh' , 'Gandalf' ] , 
             correct : 'Lord Voldemort' ,
