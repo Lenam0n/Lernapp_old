@@ -244,6 +244,9 @@ section{
 
 
 }
+#upper-Text{
+    flex-direction: column;}
+
 /* Zeitleiste */
 #zeitleiste{
     margin-left: -100px;
