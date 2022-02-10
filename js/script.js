@@ -172,8 +172,8 @@ function inputBuilder() {
 function gameStart() {
     deleteAfterPress = document.querySelectorAll(".deleteAfterPress");
     deleteTextAreas(deleteAfterPress); 
-    upperText.style["flex-direction"] =: "column";
-    upperText.style["margin-top"] =: 0;
+    upperText.style["flex-direction"] = "column";
+    upperText.style["margin-top"] = 0;
     insideBuilder();
 }
 
