@@ -80,7 +80,7 @@ function restartGame() {
     fragencount.innerText = fragencounter;
     LoadMyJs('js/datenbank.js'); 
     fragenAnzeige.style["height"] = "10em";
-    upperText.style["flex-direction"] = "column";
+    upperText.style["flex-direction"] = "row";
     upperText.style["margin-top"] = "2em";
     deleteAfterReload = document.querySelectorAll(".deleteAfterReload");
     deleteTextAreas(deleteAfterReload);
@@ -172,7 +172,7 @@ function inputBuilder() {
 function gameStart() {
     deleteAfterPress = document.querySelectorAll(".deleteAfterPress");
     deleteTextAreas(deleteAfterPress); 
-    upperText.style["flex-direction"] = "column";
+    upperText.style["flex-direction"] = "row";
     upperText.style["margin-top"] = 0;
     insideBuilder();
 }
