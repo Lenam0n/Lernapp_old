@@ -217,7 +217,10 @@ function insideBuilder() {
         
     }
     document.getElementById("question-gerne").style["opacity"] = 1;
+    
     shuffle(questions);
+
+    upperText.style["flex-direction"] = "row";
 
     switch(questions[0].type){
         case "mc":
