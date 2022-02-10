@@ -80,8 +80,8 @@ function restartGame() {
     fragencount.innerText = fragencounter;
     LoadMyJs('js/datenbank.js'); 
     fragenAnzeige.style["height"] = "10em";
-    upperText.style["flex-direction"] =: "column";
-    upperText.style["margin-top"] =: "2em";
+    upperText.style["flex-direction"] = "column";
+    upperText.style["margin-top"] = "2em";
     deleteAfterReload = document.querySelectorAll(".deleteAfterReload");
     deleteTextAreas(deleteAfterReload);
     insideBuilder(); 
