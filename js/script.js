@@ -203,7 +203,6 @@ function startBoxBuilder() {
 }
 
 function deleteTextAreas(uniqueDeleteClass) {
-    test(uniqueDeleteClass)
     for (let i = 0; i < uniqueDeleteClass.length; i++) {
         uniqueDeleteClass[i].remove();}
     }
@@ -243,7 +242,6 @@ function shuffle(array) {
         [array[currentIndex], array[randomIndex]] = [
         array[randomIndex], array[currentIndex]];
     }
-    test(array);
 return array[0];
 }
 
