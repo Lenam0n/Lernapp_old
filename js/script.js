@@ -31,7 +31,15 @@ function checkForPoints(event) {
         {targetVal = document.getElementById("inputOfGq").value;}
 
     if (targetVal == sortedByDif[0].correct){
-        score += 10;
+        if (dif == 'leicht') {
+            score += 5;
+        }
+        if (dif == 'medium') {
+            score += 10;
+        }
+        if (dif == 'hard') {
+            score += 20;
+        }
         fragencounter += 1;
         punkte.innerText = score;
         fragencount.innerText = fragencounter;
@@ -39,11 +47,19 @@ function checkForPoints(event) {
         insideBuilder();
 
     }else{
-        score -= 10;
+        if (dif == 'leicht') {
+            score -= 5;
+        }
+        if (dif == 'medium') {
+            score -= 10;
+        }
+        if (dif == 'hard') {
+            score -= 20;
+        }
         fragencounter += 1;  
         punkte.innerText = score;
         fragencount.innerText = fragencounter;
-        alert("falsche Aussage!");  
+        alert('falsche Aussage!');  
         sortedByDif.shift();
         insideBuilder();  
     }
