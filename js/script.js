@@ -21,6 +21,7 @@ var fragencount = document.getElementById("fragenCount");
 var score = 0;
 var fragencounter = 0;
 var dif = "leicht";
+var sortedByDif;
 
 
 function checkForPoints(event) {
@@ -29,12 +30,12 @@ function checkForPoints(event) {
     if (targetVal === "Submit")
         {targetVal = document.getElementById("inputOfGq").value;}
 
-    if (targetVal == questions[0].correct){
+    if (targetVal == sortedByDif[0].correct){
         score += 10;
         fragencounter += 1;
         punkte.innerText = score;
         fragencount.innerText = fragencounter;
-        questions.shift();
+        sortedByDif.shift();
         insideBuilder();
 
     }else{
@@ -43,36 +44,10 @@ function checkForPoints(event) {
         punkte.innerText = score;
         fragencount.innerText = fragencounter;
         alert("falsche Aussage!");  
-        questions.shift();
+        sortedByDif.shift();
         insideBuilder();  
     }
 }
-
-function shuffle(array) {
-    let currentIndex = array.length,  randomIndex;
-  
-    while (currentIndex != 0) {
-      randomIndex = Math.floor(Math.random() * currentIndex);
-      currentIndex--;
-
-      [array[currentIndex], array[randomIndex]] = [
-        array[randomIndex], array[currentIndex]];
-    }
-    
-    return array[0];
-  }
-
-/* function deleteTransformDiv() {
-
-    let el = document.querySelectorAll(".TransformableDiv")
-
-    for (let i = 0; i < el.length; i++) {
-        if () 
-        el.remove();
-
-    }
-
-    } */
 
 function EnterRun(event){
     if(event.keyCode == 13) {
@@ -92,6 +67,7 @@ function restartGame() {
     upperText.style["margin-top"] = "0";
     deleteAfterReload = document.querySelectorAll(".deleteAfterReload");
     deleteTextAreas(deleteAfterReload);
+    shuffle( sortForDifficulty(questions,dif) );
     insideBuilder(); 
 }
 
@@ -129,11 +105,10 @@ function gameOverScoreTextBuilder() {
 }
 
 function questionBuilder() {
-    questionGerne.innerText = questions[0].questionType;
-    question.innerText = questions[0].question;
-    questionGerne.setAttribute("class", questions[0].questionType)
-    questionGerne.innerText = questions[0].questionType
-    test(questions[0].difficulty)
+    questionGerne.innerText = sortedByDif[0].questionType;
+    question.innerText = sortedByDif[0].question;
+    questionGerne.setAttribute("class", sortedByDif[0].questionType)
+    questionGerne.innerText = sortedByDif[0].questionType
 }
 
 function buttonBuilder1() {
@@ -167,10 +142,9 @@ function startGameButtonBuilder() {
 
 function difficultyButtonBuilder(difficultyState) {
     let button = document.createElement("button");
-    button.setAttribute("class","button-style-3");
-    button.setAttribute("class" , difficultyState);
+    Object.entries( { id : difficultyState , class : 'difButton button-style-extend' } ).forEach( ( [ key , value ] ) => button.setAttribute( key , value ) );
     button.innerText = difficultyState;
-    button.addEventListener("click" , (difficultyState) => {
+    button.addEventListener("click" , () => {
         dif = button.innerText;});
     return button;
 }
@@ -191,12 +165,14 @@ function gameStart() {
     upperText.style["flex-direction"] = "row";
     upperText.style["margin-top"] = 0;
     fragencounter = 0;
+    shuffle( sortForDifficulty(questions,dif) );
     insideBuilder();
+    
 }
 
 function difficultyBoxBuilder() {
     let div = document.createElement("div");
-    Object.entries( { id : 'difficultyBox' , class : 'flex TransformableDiv' } ).forEach( ( [ key , value ] ) => div.setAttribute( key , value ) );
+    Object.entries( { id : 'difficultyBox' , class : 'flex center TransformableDiv' } ).forEach( ( [ key , value ] ) => div.setAttribute( key , value ) );
     section.appendChild(div);    
     div.appendChild( difficultyButtonBuilder("leicht") );
     div.appendChild( difficultyButtonBuilder("medium") );
@@ -211,6 +187,7 @@ function startBoxBuilder() {
 }
 
 function deleteTextAreas(uniqueDeleteClass) {
+    test(uniqueDeleteClass)
     for (let i = 0; i < uniqueDeleteClass.length; i++) {
         uniqueDeleteClass[i].remove();}
     }
@@ -220,26 +197,44 @@ function deleteTransformDiv() {
     if (el.id = "antworten-tf" || "antworten-mc" || "antworten-gq" || "startBox") el.remove();
 }
 
+
 function gameStartBuilder() {
     if (!container.hasChildNodes()) container.appendChild(section);
     if (section.hasChildNodes()) deleteTransformDiv();
-
+    
     upperText.appendChild(gameStartTextBuilder());    
     
     document.getElementById("question-gerne").style["opacity"] = 0;
     punkte.innerText = score;
     fragencount.innerText = fragencounter;
-
+    
     startBoxBuilder();
     difficultyBoxBuilder();
+}
+
+function sortForDifficulty(a,b) {
+    sortedByDif = a.filter(a => a.difficulty == b);
+    return sortedByDif;
+ }
+
+function shuffle(array) {
+    let currentIndex = array.length,  randomIndex;
+
+    while (currentIndex != 0) {
+        randomIndex = Math.floor(Math.random() * currentIndex);
+        currentIndex--;
+
+        [array[currentIndex], array[randomIndex]] = [
+        array[randomIndex], array[currentIndex]];
+    }
+    test(array);
+return array[0];
 }
 
 function insideBuilder() {
     if (section.hasChildNodes()) deleteTransformDiv();
     if (questions.length === 0 || fragencounter === 10) { 
-        
-        
-        
+                
         document.getElementById("question-gerne").style["opacity"] = 0;
         questionGerne.innerText = "";
         question.innerText = "";
@@ -257,14 +252,14 @@ function insideBuilder() {
         return;
         
     }
-
+    
     document.getElementById("question-gerne").style["opacity"] = 1;
-
-    shuffle( questions );
+    
+    shuffle( sortForDifficulty(sortedByDif,dif) );
 
     upperText.style["flex-direction"] = "row";
 
-    switch(questions[0].type){
+    switch(sortedByDif[0].type){
         case "mc":
             
             if (section.hasChildNodes()) deleteTransformDiv();
@@ -285,12 +280,12 @@ function insideBuilder() {
             button3 = document.getElementsByTagName("button")[2];   
             button4 = document.getElementsByTagName("button")[3];  
 
-            shuffle(questions[0].choices);
+            shuffle(sortedByDif[0].choices);
 
-            button1.innerHTML = questions[0].choices[0]; 
-            button2.innerHTML = questions[0].choices[1];
-            button3.innerHTML = questions[0].choices[2];
-            button4.innerHTML = questions[0].choices[3];
+            button1.innerHTML = sortedByDif[0].choices[0]; 
+            button2.innerHTML = sortedByDif[0].choices[1];
+            button3.innerHTML = sortedByDif[0].choices[2];
+            button4.innerHTML = sortedByDif[0].choices[3];
 
             allButtons = document.querySelectorAll("button");
 
@@ -304,7 +299,7 @@ function insideBuilder() {
 
         case "tf":
 
-            if (section.hasChildNodes()) deleteTextAreas(".TransformableDiv");
+            if (section.hasChildNodes()) deleteTransformDiv();
 
             questionBuilder();
 
@@ -318,10 +313,10 @@ function insideBuilder() {
             button1 = document.getElementsByTagName("button")[0];   
             button2 = document.getElementsByTagName("button")[1];   
 
-            shuffle(questions[0].choices);
+            shuffle(sortedByDif[0].choices);
             
-            button1.innerHTML = questions[0].choices[0]; 
-            button2.innerHTML = questions[0].choices[1];
+            button1.innerHTML = sortedByDif[0].choices[0]; 
+            button2.innerHTML = sortedByDif[0].choices[1];
             
 
 
@@ -335,7 +330,7 @@ function insideBuilder() {
         
         case "gq":
 
-            if (section.hasChildNodes()) deleteTextAreas(".TransformableDiv");
+            if (section.hasChildNodes()) deleteTransformDiv();
 
             questionBuilder();
 

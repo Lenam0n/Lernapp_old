@@ -119,6 +119,7 @@ section{
     transition: all ease-in 400ms;
 
 }
+
 .button-style-3:hover{
     background-color: rgb(206, 66, 11);
     
@@ -131,6 +132,39 @@ section{
     display: flex;
     justify-content: center;
 }
+#difficultyBox{
+    margin-top: 2em;
+}
+
+.difButton{
+    margin-inline: 0.7em;
+    border: solid rgba(0, 0, 0, 0.616) 2px;
+    border-radius: 15px;
+    border: solid black 3px;
+    box-shadow: 3px 2px 4px 2px grey;
+    transition: all ease-in 400ms;
+}
+
+#hard:hover {     
+    background-color: rgba(168, 80, 80, 0.61);    
+}
+#medium:hover {     
+    background-color: rgba(168, 143, 87, 0.61);    
+}     
+#leicht:hover {     
+    background-color: rgba(108, 168, 90, 0.76);    
+}   
+
+#hard:focus {     
+    background-color:rgba(177, 19, 19, 0.61);
+    border: solid rgba(177, 30, 30, 0.777) 3px;}
+#medium:focus {     
+    background-color:rgba(177, 127, 19, 0.61);
+    border: solid rgba(128, 92, 15, 0.777) 3px; }
+#leicht:focus {     
+    background-color:rgba(56, 177, 19, 0.61);
+    border: solid rgba(39, 122, 13, 0.777) 3px; }
+
 #headbar > div > p{
     margin-top: 0px;
     position: absolute;
