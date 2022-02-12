@@ -48,13 +48,13 @@ function checkForPoints(event) {
 
     }else{
         if (dif == 'leicht') {
-            score -= 5;
+            score -= 15;
         }
         if (dif == 'medium') {
             score -= 10;
         }
         if (dif == 'hard') {
-            score -= 20;
+            score -= 5;
         }
         fragencounter += 1;  
         punkte.innerText = score;
