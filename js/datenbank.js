@@ -324,6 +324,30 @@ var questions =
             correct : 'Ja' , 
             difficulty : 'medium'  ,
             Kennung : '39' } ,
+      {
+            type : 'tf' , 
+            questionType: 'AllgemeinWissen' ,
+            question : 'Ist es wirklich wahr, dass eine Raupe mehr Muskeln hat, wie ein Mensch? ', 
+            choices : [ 'Ja', 'Nein'],
+            correct : 'Ja' , 
+            difficulty : 'medium'  ,
+            Kennung : '40' } ,
+      {
+            type : 'tf' , 
+            questionType: 'AllgemeinWissen' ,
+            question : 'Ist es wirklich wahr, dass männliche Affen im Gegensatz zu Männern keine Glatze bekommen können?', 
+            choices : [ 'Ja', 'Nein'],
+            correct : 'Nein' , 
+            difficulty : 'medium'  ,
+            Kennung : '41' } ,
+      {
+            type : 'tf' , 
+            questionType: 'AllgemeinWissen' ,
+            question : 'Ist es wirklich wahr, dass Krokodile ihre Zunge nicht herausstrecken können? ', 
+            choices : [ 'Ja', 'Nein'],
+            correct : 'Ja' , 
+            difficulty : 'medium'  ,
+            Kennung : '42' } ,
 
             
             /*             {
