@@ -382,7 +382,7 @@ var questions =
             Kennung : '46' } ,
       {
             type : 'mc' , 
-            questionType: '' ,
+            questionType: 'Biologie' ,
             question : 'Welche Aussage ist richtig?', 
             choices : [ 'Nach dem heutigen Wissensstand stammen sämtliche Hunde vom Wolf ab.', 'Nach dem heutigen Wissensstand stammen sämtliche Hunde vom Wolf ab.','Hunde sind typische Einzelgänger.', 'Mischlinge sind erheblich gesünder als Rassehunde.'],
             correct : 'Nach dem heutigen Wissensstand stammen sämtliche Hunde vom Wolf ab.' , 
@@ -390,7 +390,7 @@ var questions =
             Kennung : '47' } ,
       {
             type : 'mc' , 
-            questionType: '' ,
+            questionType: 'Biologie' ,
             question : 'Welche Aussage ist falsch?', 
             choices : [ 'Hunde verständigen sich unter einander vorwiegend durch Lautäußerungen.', 'Hunde verständigen sich durch Körpersprache.','Für die Verständigung spielt auch die Mimik eine große Rolle.', 'Auch die Haltung des Schwanzes ist ein sicherer Stimmungsanzeiger.'],
             correct : 'Hunde verständigen sich unter einander vorwiegend durch Lautäußerungen.' , 
