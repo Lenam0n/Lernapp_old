@@ -403,23 +403,22 @@ function test(param) {
     
     }
     
-    
+    /*
     function deleteTransformDiv() {
     
     var el = document.getElementsByClassName("TransformableDiv")[0];
     
     if (el.id = "antworten-tf" || "antworten-mc" || "antworten-gq" || "startBox" || 'prüfungsBox' || 'difficultyBox') el.remove();
     
-    }
+    }*/
     
     
     function deleteTransformDiv() {
 
         var el = document.querySelectorAll("TransformableDiv");
-        el.forEach(
-            
-        ).remove();
-        if (el.id = "antworten-tf" || "antworten-mc" || "antworten-gq" || "startBox" || 'prüfungsBox' || 'difficultyBox') el.remove();
+        el.forEach(element => {
+           if (el.id = "antworten-tf" || "antworten-mc" || "antworten-gq" || "startBox" || 'prüfungsBox' || 'difficultyBox') el.remove();
+        });
         
         }
         
