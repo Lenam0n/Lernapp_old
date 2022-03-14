@@ -1,3 +1,10 @@
+<!-- <?php
+
+	$db = new PDO('mysql:host=localhost;dbname=quizapp', 'root', '');
+	$result = $db -> query( 'SELECT * FROM questions' );
+
+?> -->
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -38,7 +45,10 @@
 
 
 
-
+<!--     <script>
+			const questions = [ <?php while ( $row = $result -> fetchObject() ) { echo '{ id : ' . $row -> id . ' , question : "' . $row -> question . '" , type : "' . $row -> type . '"} , '; } ?> ];
+			console.log(questions);
+	</script> -->
     <script type="text/javascript" src="js/script.js"></script>
 </body>
 </html>

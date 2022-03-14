@@ -6,7 +6,9 @@ var questions =
             choices : [ 'Lord Voldemort' , 'Darth Vader' , 'Winnie Puh' , 'Gandalf' ] , 
             correct : 'Lord Voldemort' , 
             difficulty : 'leicht'  ,
-            Kennung : '1' } ,
+            Kennung : '1',
+            Prüfungsrelevant: 'true'
+       } ,
 		{ 
             type : 'tf' , 
             questionType: 'Filme' ,
