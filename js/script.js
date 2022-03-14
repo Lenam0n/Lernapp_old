@@ -83,8 +83,7 @@ function restartGame() {
     upperText.style["margin-top"] = "0";
     deleteAfterReload = document.querySelectorAll(".deleteAfterReload");
     deleteTextAreas(deleteAfterReload);
-    shuffle( sortForDifficulty(questions,dif) );
-    insideBuilder(); 
+    gameStartBuilder();
 }
 
 
