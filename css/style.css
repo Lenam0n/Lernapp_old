@@ -295,8 +295,10 @@ header#Main { position: relative; }
 
 /* colorThemes */
 .Serien{background-color: rgba(95, 158, 160, 0.603);}
+.Englisch{background-color: rgba(201, 204, 22, 0.836);}
 .Media{background-color:rgba(80, 70, 10, 1)}
 .Nawi{background-color:rgb(19, 129, 62);}
+.Biologie{background-color:rgb(0, 100, 38);}
 .AllgemeinWissen{background-color: rgb(216, 153, 36);}
 .Chemie{background-color: rgb(109, 247, 82);}
 .Filme{background-color: rgba(25, 47, 48, 0.603);}

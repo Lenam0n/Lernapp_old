@@ -208,7 +208,7 @@ function insideBuilder() {
                 
                 allButtons[i].addEventListener("click", checkForPoints);
             }
-            
+
             break;
 
 
@@ -218,6 +218,8 @@ function insideBuilder() {
             if (section.hasChildNodes()) deleteTransformDiv();
 
             questionBuilder();
+
+            fragenAnzeige.appendChild(sortedArray[0].image);
 
             var div = document.createElement("div");
             Object.entries( { id : 'antworten-gq' , class : 'flex TransformableDiv' } ).forEach( ( [ key , value ] ) => div.setAttribute( key , value ) );
@@ -237,7 +239,8 @@ function insideBuilder() {
 
 
 
-        case "":
+        case "pa":
+            /* picture answers */
 
             break;
     }

@@ -4,7 +4,7 @@ function restartGame() {
     fragencounter = 0;
     punkte.innerText = score;
     fragencount.innerText = fragencounter;
-    LoadMyJs('js/datenbank.js'); 
+/*     LoadMyJs('js/datenbank.js'); */ 
     fragenAnzeige.style["height"] = "10em";
     upperText.style["flex-direction"] = "row";
     upperText.style["margin-top"] = "0";
