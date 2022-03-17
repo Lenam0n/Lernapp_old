@@ -26,8 +26,12 @@ main {}
 
 section{
     background-color: rgba(255, 255, 255,0.8);
-
-    padding:2em 0;
+    display: flex;
+    flex-direction: row;
+    padding:3.5em 0;
+    border-radius: 15px;
+    border: solid black 2px;
+    margin-bottom: 3.5em;
 }
 footer {}
 
@@ -41,12 +45,6 @@ header nav > ul > li > a {}
 
 
 header#Main { position: relative; }
-
-section{
-    border-radius: 15px;
-    border: solid black 2px;
-    margin-bottom: 3.5em;
-}
 
 .inside{
 
@@ -65,7 +63,7 @@ section{
     border: transparent 1px;
     width: 100%;
     max-width: 1200px;
-    height: 850px;
+    height: 900px;
     background-color: #d64141;
     outline: 2px solid black;
 
@@ -119,11 +117,28 @@ section{
     transition: all ease-in 400ms;
 
 }
-
 .button-style-3:hover{
     background-color: rgb(206, 66, 11);
     
 }
+
+.button-style-4{
+    background-color: rgb(49, 134, 184);
+    font-weight: 500;
+    font-size: 22px;
+    width: 200px;
+    height: 75px;
+    color: #fff;
+    border-radius: 15px;
+    box-shadow: 3px 2px 4px 2px grey;
+    transition: all ease-in 400ms;
+}
+
+.button-style-4:hover{
+    background-color: rgb(24, 119, 122);
+    
+}
+
 /* content */
 
 /* Headbar */
@@ -132,18 +147,47 @@ section{
     display: flex;
     justify-content: center;
 }
+
 #difficultyBox{
-    margin-top: 2em;
+
 }
 
-.difButton{
+#lessonbox {
+    margin-top: -3em;
+    display: flex;
+    justify-content: space-evenly;
+
+    
+}
+#lessonbox > *{
+    flex-basis: 23%;;
+    flex-grow: 0;
+    margin-top: 1em;
+    padding: 0.4em;
+}
+#lessonbox #Fächer,#lessonbox #prüfungsButton{
+    margin-top: 3.4em;
+    flex-basis: 0 !important;
+    flex-grow: 0 !important;
+}
+
+.MenüButton {
     margin-inline: 0.7em;
     border: solid rgba(0, 0, 0, 0.616) 2px;
     border-radius: 15px;
     border: solid black 3px;
     box-shadow: 3px 2px 4px 2px grey;
     transition: all ease-in 400ms;
+    cursor: pointer;
 }
+
+#lesson:hover {     
+    background-color: rgba(235, 194, 81, 0.61);    
+}
+#hard:focus {     
+    background-color:rgb(235, 194, 81);
+    border: solid rgba(235, 181, 81, 0.699)  3px;}
+
 
 #hard:hover {     
     background-color: rgba(168, 80, 80, 0.61);    
@@ -186,7 +230,8 @@ section{
        border-radius: 50px;
 }
 #startBox{
-    justify-content: center;
+    justify-content: space-between;
+    margin-inline:6em;
     align-items: center;
 }
 .bg-count{
@@ -216,9 +261,11 @@ section{
     margin-top: 1em;
 }
 
-.question-bg{
-
-    
+.questionImage{
+    margin-left: 3em;
+    width: 220px;
+    height: 240px;
+    border: solid rgb(80, 80, 80) 2px;
 }
 #question-gerne{
     padding-top: 0.7em;
@@ -250,16 +297,18 @@ section{
 
 /* colorThemes */
 .Serien{background-color: rgba(95, 158, 160, 0.603);}
+.Englisch{background-color: rgba(201, 204, 22, 0.836);}
 .Media{background-color:rgba(80, 70, 10, 1)}
 .Nawi{background-color:rgb(19, 129, 62);}
+.Biologie{background-color:rgb(0, 100, 38);}
 .AllgemeinWissen{background-color: rgb(216, 153, 36);}
+.Chemie{background-color: rgb(109, 247, 82);}
 .Filme{background-color: rgba(25, 47, 48, 0.603);}
 .Erdkunde{background-color: rgba(105, 50, 19, 0.603);}
 .Mathe{background-color: rgba(243, 17, 17, 0.603);}
 .Bücher{background-color: rgba(13, 24, 175, 0.603);}
 .Logik{background-color: rgba(124, 223, 79, 0.603);}
 .Politik{background-color: rgba(28, 212, 166, 0.603);}
-.Sozi{background-color: rgba(73, 24, 119, 0.603);}
 
 
 /* antworten Multible Choise */
@@ -284,6 +333,13 @@ section{
     margin-right: 6%;
 
 
+}
+
+#antworten-pq{
+    align-items: center;
+    justify-content: center;
+    margin-left: -1em;
+    
 }
 
 /* Zeitleiste */
