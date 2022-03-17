@@ -160,7 +160,7 @@ header#Main { position: relative; }
     
 }
 #lessonbox > *{
-    flex-basis: 50%;
+    flex-basis: 23%;;
     flex-grow: 0;
     margin-top: 1em;
     padding: 0.4em;
