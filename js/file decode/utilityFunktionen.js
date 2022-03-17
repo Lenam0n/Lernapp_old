@@ -1,3 +1,7 @@
+function test(param) {
+    console.log(param || "test");
+}
+
 function deleteTextAreas(uniqueDeleteClass) {
     for (let i = 0; i < uniqueDeleteClass.length; i++) {
         uniqueDeleteClass[i].remove();}
@@ -21,9 +25,9 @@ function EnterRun(event){
         checkForPoints( event );
     }
 }
-function sortQuestions(a,b,c='difficulty') {
-    sortedByDif = a.filter(a => a[ c ] == b);
-    return sortedByDif;
+function sortQuestions(a,b,c) {
+    sortedArray = a.filter(a => a[c] == b);
+    return sortedArray;
  }
 
 
@@ -40,9 +44,9 @@ function shuffle(array) {
 return array[0];
 }
 
-function foo ( a , b , c='Hallo' ) {
-    console.log(a,b,c);
+function uniqeFächer() {
+    uniqeFachArray =  questions.map(item => item.questionType)
+    .filter((value, index, self) => self.indexOf(value) === index)
+    return uniqeFachArray;
+    
 }
-
-foo('An die ' , 'Welt ein ' );
-foo('An die ' , 'Welt ein ' , 'Tschüss' );

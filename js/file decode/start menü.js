@@ -4,6 +4,8 @@ function gameStartBuilder() {
     if (!container.hasChildNodes()) container.appendChild(section);
     if (section.hasChildNodes()) deleteTransformDiv();
     
+    if (!upperText.hasChildNodes('h2')) {
+    }
     upperText.appendChild(gameStartTextBuilder());    
     
     document.getElementById("question-gerne").style["opacity"] = 0;
@@ -21,7 +23,21 @@ function gameStart() {
     upperText.style["flex-direction"] = "row";
     upperText.style["margin-top"] = 0;
     fragencounter = 0;
-    shuffle( sortForDifficulty(questions,mode) );
+
+    if (typeof fach !== 'undefined' && prüfungsrelevant === false) {
+        shuffle( sortQuestions(questions,fach,'questionType') );
+    }
+
+    if(prüfungsrelevant === true){
+        shuffle( sortQuestions(questions,true,'prüfungsrelevant') );
+        
+    }
+    if (prüfungsrelevant === false) {
+        shuffle( sortQuestions(questions,dif,'difficulty') );
+        
+    }
+    
+    
     insideBuilder();
     
 }
@@ -31,7 +47,7 @@ function lessonBoxBuilder() {
     Object.entries( { id : 'lessonBox' , class : 'flex center TransformableDiv' } ).forEach( ( [ key , value ] ) => div.setAttribute( key , value ) );
     section.appendChild(div);    
     div.appendChild( lessonBoxButtonBuilder('Fächer') );
-    div.appendChild( prüfungsButtonBuilder('Prüfungsrelevant') );
+    div.appendChild( prüfungsButtonBuilder('prüfungsrelevant') );
 }
 
 function lessonBoxButtonBuilder(lesson) {
@@ -43,30 +59,34 @@ function lessonBoxButtonBuilder(lesson) {
         let div = document.createElement( 'div' );
         Object.entries( { id : 'lessonBox' , class : 'flex center TransformableDiv' } ).forEach( ( [ key , value ] ) => div.setAttribute( key , value ) );
         section.append( div );
-        for (let i = 0; i< 10 ; i++) {
-            div.appendChild( lessonButtonBuilder(i) );
+        uniqeFächer();
+        for (let i = 0; i< uniqeFachArray.length ; i++) {
+            div.appendChild( lessonButtonBuilder(uniqeFachArray[i]) );
         }
         });
     return button;
 }
 
 function lessonButtonBuilder(lesson) {
+    prüfungsrelevant = false;
     let button = document.createElement("button");
     Object.entries( { id : lesson , class : 'MenüButton button-style-extend' } ).forEach( ( [ key , value ] ) => button.setAttribute( key , value ) );
     button.innerText = lesson;
     button.addEventListener("click" , () => {
+        fach = button.innerText;
+        startBoxBuilder();
         
 
     });
     return button;
 }
 
-function prüfungsButtonBuilder(params) {
+function prüfungsButtonBuilder(p) {
     let button = document.createElement("button");
     Object.entries( { id : 'prüfungsButton' , class : 'MenüButton button-style-extend' } ).forEach( ( [ key , value ] ) => button.setAttribute( key , value ) );
-    button.innerText = 'prüfungsrelevant';
+    button.innerText = p;
     button.addEventListener("click" , () => {
-        mode = button.innerText;
+        prüfungsrelevant = true;
         startBoxBuilder();});
     return button;
 }
@@ -81,6 +101,7 @@ function difficultyBoxBuilder() {
 }
 
 function difficultyButtonBuilder(difficultyState) {
+    prüfungsrelevant = false;
     let button = document.createElement("button");
     Object.entries( { id : difficultyState , class : 'MenüButton button-style-extend' } ).forEach( ( [ key , value ] ) => button.setAttribute( key , value ) );
     button.innerText = difficultyState;
@@ -95,14 +116,28 @@ function startBoxBuilder() {
     let div = document.createElement("div");
     Object.entries( { id : 'startBox' , class : 'flex TransformableDiv' } ).forEach( ( [ key , value ] ) => div.setAttribute( key , value ) );
     section.appendChild(div);    
+    div.appendChild( backToMainButtonBuilder() );
     div.appendChild( startGameButtonBuilder() );
 }
 
-function startGameButtonBuilder() {
+function startGameButtonBuilder(params) {
     let button = document.createElement("button");
     button.setAttribute("class","button-style-3");
     button.setAttribute("onclick","gameStart()");
     button.innerText ="Start The Guessing Game";
+    return button;
+}
+
+function backToMainButtonBuilder() {
+    let button = document.createElement("button");
+    button.setAttribute("class","button-style-4");
+    button.setAttribute("id","backToMainButton")
+    button.addEventListener('click', ()=> {
+        deleteAfterReload = document.querySelectorAll(".deleteAfterPress");
+        deleteTextAreas(deleteAfterReload);
+        gameStartBuilder();
+    });
+    button.innerText ="Back to the Main Menü";
     return button;
 }
 

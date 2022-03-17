@@ -26,8 +26,12 @@ main {}
 
 section{
     background-color: rgba(255, 255, 255,0.8);
-
-    padding:2em 0;
+    display: flex;
+    flex-direction: row;
+    padding:3.5em 0;
+    border-radius: 15px;
+    border: solid black 2px;
+    margin-bottom: 3.5em;
 }
 footer {}
 
@@ -41,12 +45,6 @@ header nav > ul > li > a {}
 
 
 header#Main { position: relative; }
-
-section{
-    border-radius: 15px;
-    border: solid black 2px;
-    margin-bottom: 3.5em;
-}
 
 .inside{
 
@@ -65,7 +63,7 @@ section{
     border: transparent 1px;
     width: 100%;
     max-width: 1200px;
-    height: 850px;
+    height: 900px;
     background-color: #d64141;
     outline: 2px solid black;
 
@@ -123,6 +121,24 @@ section{
     background-color: rgb(206, 66, 11);
     
 }
+
+.button-style-4{
+    background-color: rgb(49, 134, 184);
+    font-weight: 500;
+    font-size: 22px;
+    width: 200px;
+    height: 75px;
+    color: #fff;
+    border-radius: 15px;
+    box-shadow: 3px 2px 4px 2px grey;
+    transition: all ease-in 400ms;
+}
+
+.button-style-4:hover{
+    background-color: rgb(24, 119, 122);
+    
+}
+
 /* content */
 
 /* Headbar */
@@ -131,10 +147,9 @@ section{
     display: flex;
     justify-content: center;
 }
-<<<<<<< Updated upstream
-=======
+
 #difficultyBox{
-    margin-top: 2em;
+
 }
 
 .MenüButton{
@@ -175,7 +190,6 @@ section{
     background-color:rgba(56, 177, 19, 0.61);
     border: solid rgba(39, 122, 13, 0.777) 3px; }
 
->>>>>>> Stashed changes
 #headbar > div > p{
     margin-top: 0px;
     position: absolute;
@@ -197,7 +211,8 @@ section{
        border-radius: 50px;
 }
 #startBox{
-    justify-content: center;
+    justify-content: space-between;
+    margin-inline:6em;
     align-items: center;
 }
 .bg-count{

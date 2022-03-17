@@ -1,4 +1,4 @@
-var questions =  
+const questions =  
         [{ 
             type : 'mc' , 
             questionType: 'Bücher' ,
@@ -7,7 +7,6 @@ var questions =
             correct : 'Lord Voldemort' , 
             difficulty : 'leicht'  ,
             Kennung : '1',
-            Prüfungsrelevant: 'true'
        } ,
 		{ 
             type : 'tf' , 
@@ -197,7 +196,8 @@ var questions =
             choices : [ '4' , '8' , '16' , '32' ] , 
             correct : '8' , 
             difficulty : 'leicht'  ,
-            Kennung : '23' } ,
+            Kennung : '23',
+            prüfungsrelevant: true } ,
             {
             type : 'mc' , 
             questionType: 'Erdkunde' ,
@@ -205,19 +205,19 @@ var questions =
             choices : [ 'Bodensee' , 'Chiemsee' , 'Ammersee' , 'Starnberger See' ] , 
             correct : 'Bodensee' , 
             difficulty : 'medium'  ,
-            Kennung : '24' } ,
+            Kennung : '24',
+            prüfungsrelevant: true } ,
             {
             type : 'tf' , 
             questionType: 'Nawi' ,
             question : 'Ist Astronomie eine Naturwissenschaften.' , 
             choices : [ 'Ja', 'Nein'],
             correct : 'Ja' , 
-            difficulty : 'medium'  ,
-            Kennung : '25' } , 
+            /* difficulty : 'medium'  , */
+            Kennung : '25',
+            prüfungsrelevant: true } , 
 
-            /* {
-            type : 'gq' , 
-            questionType: 'Nawi' ,
-            question : 'Nennen Sie eine Naturwissenschaften.' , 
-            correct : 'Biologie' || 'Physik'|| 'Chemie' || 'Astronomie' || 'Geowissenschaften'} ,
- */      ];
+            
+
+
+      ];
