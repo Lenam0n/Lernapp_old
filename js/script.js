@@ -22,6 +22,7 @@ var dif;
 var sortedArray;
 var uniqeFachArray;
 var fach;
+var fächerAbfrage = false;
 var prüfungsrelevant = false;
 var wrongAnswer;
 
@@ -139,15 +140,16 @@ function gameStart() {
     upperText.style["margin-top"] = 0;
     fragencounter = 0;
 
-    if (typeof fach !== 'undefined' && prüfungsrelevant === false) {
+    if (fächerAbfrage === true && prüfungsrelevant === false) {
         shuffle( sortQuestions(questions,fach,'questionType') );
     }
 
     if(prüfungsrelevant === true){
         shuffle( sortQuestions(questions,true,'prüfungsrelevant') );
         
+        
     }
-    if (prüfungsrelevant === false) {
+    if (fächerAbfrage === false && prüfungsrelevant === false) {
         shuffle( sortQuestions(questions,dif,'difficulty') );
         
     }
@@ -177,13 +179,14 @@ function lessonBoxButtonBuilder(lesson) {
         uniqeFächer();
         for (let i = 0; i< uniqeFachArray.length ; i++) {
             div.appendChild( lessonButtonBuilder(uniqeFachArray[i]) );
-
+            
         }
-        });
+    });
     return button;
 }
 
 function lessonButtonBuilder(lesson) {
+    fächerAbfrage = true;
     prüfungsrelevant = false;
     let button = document.createElement("button");
     Object.entries( { id : lesson , class : 'MenüButton button-style-extend ' + lesson } ).forEach( ( [ key , value ] ) => button.setAttribute( key , value ) );
@@ -199,6 +202,7 @@ function lessonButtonBuilder(lesson) {
 }
 
 function prüfungsButtonBuilder(p) {
+    fächerAbfrage = false;
     let button = document.createElement("button");
     Object.entries( { id : 'prüfungsButton' , class : 'MenüButton button-style-extend' } ).forEach( ( [ key , value ] ) => button.setAttribute( key , value ) );
     button.innerText = p;
@@ -218,6 +222,7 @@ function difficultyBoxBuilder() {
 }
 
 function difficultyButtonBuilder(difficultyState) {
+    fächerAbfrage = false;
     prüfungsrelevant = false;
     let button = document.createElement("button");
     Object.entries( { id : difficultyState , class : 'MenüButton button-style-extend' } ).forEach( ( [ key , value ] ) => button.setAttribute( key , value ) );
@@ -399,9 +404,10 @@ function insideBuilder() {
     unteren Kopieren und anschließend den 2. Wert = Vergleichswert 
     und den 3. Wert = von wo aus verglichen werden soll anpassen */
 
-    if (typeof fach !== 'undefined' && prüfungsrelevant === false) {
+
+    if (fächerAbfrage === true && prüfungsrelevant === false) {
         shuffle( sortQuestions(sortedArray,fach,'questionType') );}
-    if (prüfungsrelevant === false) {
+    if (fächerAbfrage === false && prüfungsrelevant === false) {
         shuffle( sortQuestions(sortedArray,dif,'difficulty') );}
     if (prüfungsrelevant === true) {
         shuffle( sortQuestions(sortedArray,true,'prüfungsrelevant') );}
