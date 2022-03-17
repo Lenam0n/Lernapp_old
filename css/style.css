@@ -261,9 +261,11 @@ header#Main { position: relative; }
     margin-top: 1em;
 }
 
-.question-bg{
-
-    
+.questionImage{
+    margin-left: 3em;
+    width: 220px;
+    height: 240px;
+    border: solid rgb(80, 80, 80) 2px;
 }
 #question-gerne{
     padding-top: 0.7em;
@@ -331,6 +333,13 @@ header#Main { position: relative; }
     margin-right: 6%;
 
 
+}
+
+#antworten-pq{
+    align-items: center;
+    justify-content: center;
+    margin-left: -1em;
+    
 }
 
 /* Zeitleiste */

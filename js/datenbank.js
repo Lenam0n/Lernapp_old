@@ -528,16 +528,16 @@ const questions =
             difficulty : 'hard'  ,
             Kennung : '63' } ,
 
-      /* {
+      {
       type : 'pq' , 
       questionType: 'Mathe' ,
       question : 'welche der Funktionen ist "f(x)=-0,5+3"',
-      image : src = img/FunktionFrage1.png , 
-      choices : [ 'Ja', 'Nein'],
+      image : "img/FunktionFrage1.png" , 
+      choices : [ 'A', 'B','C', 'D'],
       correct : 'Ja' , 
       difficulty : 'hard'  ,
       Kennung : '26',
-      prüfungsrelevant: true}, */
+      prüfungsrelevant: true},
 
       
 

@@ -217,21 +217,42 @@ function insideBuilder() {
 
             if (section.hasChildNodes()) deleteTransformDiv();
 
+            var div = document.createElement("div");
+            var Snddiv = document.createElement("div");
+
             questionBuilder();
 
-            fragenAnzeige.appendChild(sortedArray[0].image);
+        
+            var img = new Image();
+            img.src = sortedArray[0].image;
+            img.setAttribute('class', 'questionImage')
+            section.appendChild(Snddiv);
+            Snddiv.appendChild(img);
 
-            var div = document.createElement("div");
-            Object.entries( { id : 'antworten-gq' , class : 'flex TransformableDiv' } ).forEach( ( [ key , value ] ) => div.setAttribute( key , value ) );
+            
+                
+            Object.entries( { id : 'antworten-pq' , class : 'flex TransformableDiv' } ).forEach( ( [ key , value ] ) => div.setAttribute( key , value ) );
             section.appendChild(div);
-            div.appendChild( /*  */ ); 
-            div.appendChild( /*  */ );
+            div.appendChild( buttonBuilder2() );
+            div.appendChild( buttonBuilder2() );
+            div.appendChild( buttonBuilder2() );
+            div.appendChild( buttonBuilder2() );
 
+            button1 = document.getElementsByTagName("button")[0];   
+            button2 = document.getElementsByTagName("button")[1];   
+            button3 = document.getElementsByTagName("button")[2];   
+            button4 = document.getElementsByTagName("button")[3];  
+
+            shuffle(sortedArray[0].choices);
+
+            button1.innerHTML = sortedArray[0].choices[0]; 
+            button2.innerHTML = sortedArray[0].choices[1];
+            button3.innerHTML = sortedArray[0].choices[2];
+            button4.innerHTML = sortedArray[0].choices[3];
 
             allButtons = document.querySelectorAll("button");
 
             for (let i = 0; i < allButtons.length; i++) {
-                
                 allButtons[i].addEventListener("click", checkForPoints);
             }
 
