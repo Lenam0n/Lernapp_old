@@ -18,7 +18,7 @@ var punkte = document.getElementById("punkte");
 var fragencount = document.getElementById("fragenCount");
 var score = 0;
 var fragencounter = 0;
-var dif = "leicht";
+var dif;
 var sortedArray;
 var uniqeFachArray;
 var fach;
