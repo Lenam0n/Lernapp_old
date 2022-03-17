@@ -1,4 +1,4 @@
-var questions =  
+const questions =  
         [{ 
             type : 'mc' , 
             questionType: 'Bücher' ,
@@ -6,7 +6,7 @@ var questions =
             choices : [ 'Lord Voldemort' , 'Darth Vader' , 'Winnie Puh' , 'Gandalf' ] , 
             correct : 'Lord Voldemort' , 
             difficulty : 'leicht'  ,
-            Kennung : '1' } ,
+            Kennung : '1'} ,
 		{ 
             type : 'tf' , 
             questionType: 'Filme' ,
@@ -195,7 +195,7 @@ var questions =
             choices : [ '4' , '8' , '16' , '32' ] , 
             correct : '8' , 
             difficulty : 'leicht'  ,
-            Kennung : '23' } ,
+            Kennung : '23'} ,
             {
             type : 'mc' , 
             questionType: 'Erdkunde' ,
@@ -203,15 +203,16 @@ var questions =
             choices : [ 'Bodensee' , 'Chiemsee' , 'Ammersee' , 'Starnberger See' ] , 
             correct : 'Bodensee' , 
             difficulty : 'medium'  ,
-            Kennung : '24' } ,
+            Kennung : '24'} ,
             {
             type : 'tf' , 
             questionType: 'Nawi' ,
-            question : 'Ist Astronomie eine Naturwissenschaften.' , 
+            question : 'Ist Astrologie eine Naturwissenschaften.' , 
             choices : [ 'Ja', 'Nein'],
-            correct : 'Ja' , 
+            correct : 'Nein' , 
             difficulty : 'medium'  ,
-            Kennung : '25' } , 
+            Kennung : '25',
+            prüfungsrelevant: true} , 
             {
             type : 'mc' , 
             questionType: 'AllgemeinWissen' ,
@@ -308,7 +309,7 @@ var questions =
             correct : 'Ja' , 
             difficulty : 'medium'  ,
             Kennung : '37' } , 
-      {
+            {
             type : 'tf' , 
             questionType: 'Geschichte' ,
             question : 'Ist es wirklich wahr, dass der Nil schon einmal zugefroren war?', 
@@ -316,7 +317,7 @@ var questions =
             correct : 'Ja' , 
             difficulty : 'medium'  ,
             Kennung : '38' } ,
-      {
+            {
             type : 'tf' , 
             questionType: 'AllgemeinWissen' ,
             question : 'Ist es wirklich wahr, dass in den USA statistisch gesehen jeden Tag ein US-Bürger vom Blitz erschlagen wird?', 
@@ -324,7 +325,7 @@ var questions =
             correct : 'Ja' , 
             difficulty : 'medium'  ,
             Kennung : '39' } ,
-      {
+            {
             type : 'tf' , 
             questionType: 'AllgemeinWissen' ,
             question : 'Ist es wirklich wahr, dass eine Raupe mehr Muskeln hat, wie ein Mensch? ', 
@@ -332,7 +333,7 @@ var questions =
             correct : 'Ja' , 
             difficulty : 'medium'  ,
             Kennung : '40' } ,
-      {
+            {
             type : 'tf' , 
             questionType: 'AllgemeinWissen' ,
             question : 'Ist es wirklich wahr, dass männliche Affen im Gegensatz zu Männern keine Glatze bekommen können?', 
@@ -340,7 +341,7 @@ var questions =
             correct : 'Nein' , 
             difficulty : 'medium'  ,
             Kennung : '41' } ,
-      {
+            {
             type : 'tf' , 
             questionType: 'AllgemeinWissen' ,
             question : 'Ist es wirklich wahr, dass Krokodile ihre Zunge nicht herausstrecken können? ', 
@@ -348,7 +349,7 @@ var questions =
             correct : 'Ja' , 
             difficulty : 'medium'  ,
             Kennung : '42' } ,
-      {
+            {
             type : 'tf' , 
             questionType: 'Chemie' ,
             question : 'Was sind Alkane         Summenformel: CnH2n+2', 
@@ -356,7 +357,7 @@ var questions =
             correct : 'eine Stoffgruppe der gesättigten Kohlenwasserstoffe' , 
             difficulty : 'medium'  ,
             Kennung : '43' } ,
-      {
+            {
             type : 'mc' , 
             questionType: 'AllgemeinWissen' ,
             question : 'In Deutschland dürfen Menschen offen etwas gegen die Regierung sagen weil ...?', 
@@ -364,7 +365,7 @@ var questions =
             correct : '...hier Meinungsfreiheit gilt.' , 
             difficulty : 'leicht'  ,
             Kennung : '44' } ,
-      {
+            {
             type : 'mc' , 
             questionType: 'AllgemeinWissen' ,
             question : 'Bis zu ihrem 14. Lebensjahr dürfen Eltern, in Deutschland drüber entscheiden ob ihr Kind am...', 
@@ -372,7 +373,7 @@ var questions =
             correct : '...Religionsunterricht teilnehmen soll.' , 
             difficulty : 'leicht'  ,
             Kennung : '45' } ,
-      {
+            {
             type : 'mc' , 
             questionType: 'AllgemeinWissen' ,
             question : 'Deutschland ist ein Rechtsstaat. Was ist damit gemeint?', 
@@ -380,7 +381,7 @@ var questions =
             correct : 'Alle Einwohner / Einwohnerinnen und der Staat müssen sich an die Gesetze halten.' , 
             difficulty : 'leicht'  ,
             Kennung : '46' } ,
-      {
+            {
             type : 'mc' , 
             questionType: 'Biologie' ,
             question : 'Welche Aussage ist richtig?', 
@@ -388,7 +389,7 @@ var questions =
             correct : 'Nach dem heutigen Wissensstand stammen sämtliche Hunde vom Wolf ab.' , 
             difficulty : 'leicht'  ,
             Kennung : '47' } ,
-      {
+            {
             type : 'mc' , 
             questionType: 'Biologie' ,
             question : 'Welche Aussage ist falsch?', 
@@ -406,7 +407,7 @@ var questions =
             difficulty : 'medium'  ,
             Kennung : '' } ,  */
 
-      {
+            {
             type : 'mc' , 
             questionType: 'Erdkunde' ,
             question : 'Das flächenmäßig kleinste Bundesland heißt?', 
@@ -414,7 +415,7 @@ var questions =
             correct : 'Bremen' , 
             difficulty : 'leicht'  ,
             Kennung : '49' } ,
-      {
+            {
             type : 'mc' , 
             questionType: 'AllgemeinWissen' ,
             question : 'Was bedeutet das lateinische “carpe diem”?', 
@@ -422,7 +423,7 @@ var questions =
             correct : 'Nutze den Tag' , 
             difficulty : 'hard'  ,
             Kennung : '50' } ,
-      {
+            {
             type : 'mc' , 
             questionType: 'AllgemeinWissen' ,
             question : 'Was ist die “Goldene Himbeere”?', 
@@ -430,7 +431,7 @@ var questions =
             correct : 'Ein Preis für die schlechteste Leistung innerhalb eines Filmjahres' , 
             difficulty : 'hard'  ,
             Kennung : '51' } ,
-      {
+            {
             type : 'mc' , 
             questionType: 'AllgemeinWissen' ,
             question : 'Welcher deutsche Herrscher trug den Beinamen “der Große”?', 
@@ -438,7 +439,7 @@ var questions =
             correct : 'Friedrich II. von Preußen' , 
             difficulty : 'hard'  ,
             Kennung : '52' } ,
-      {
+            {
             type : 'mc' , 
             questionType: 'AllgemeinWissen' ,
             question : 'Welcher Pilz ist einer der giftigsten der Welt?', 
@@ -446,7 +447,7 @@ var questions =
             correct : 'Der Grüne Knollenblätterpilz' , 
             difficulty : 'medium'  ,
             Kennung : '53' } ,
-      {
+            {
             type : 'mc' , 
             questionType: 'Sport' ,
             question : 'Welche Gürtelfarbe existiert nicht im Kampfsport Karate?', 
@@ -454,7 +455,7 @@ var questions =
             correct : 'Rot' , 
             difficulty : 'leicht'  ,
             Kennung : '54' } ,
-      {
+            {
             type : 'mc' , 
             questionType: 'AllgemeinWissen' ,
             question : 'Einen Feinschmecker nennt man auch?', 
@@ -462,7 +463,7 @@ var questions =
             correct : 'Gourmet' , 
             difficulty : 'leicht'  ,
             Kennung : '55' } ,
-      {
+            {
             type : 'mc' , 
             questionType: 'Erdkunde' ,
             question : 'Welche Insel gehört nicht zu den balearischen Inseln?', 
@@ -470,7 +471,7 @@ var questions =
             correct : 'Gran Canaria' , 
             difficulty : 'medium'  ,
             Kennung : '56' } ,
-      {
+            {
             type : 'mc' , 
             questionType: 'Filme' ,
             question : 'Welcher Schauspieler hat nicht in einem James Bond-Film mitgespielt?', 
@@ -478,7 +479,7 @@ var questions =
             correct : 'Leonardo DiCaprio' , 
             difficulty : 'hard'  ,
             Kennung : '57' } ,
-      {
+            {
             type : 'mc' , 
             questionType: 'AllgemeinWissen' ,
             question : 'Folgt man dem Äquator um die Welt, legt man wie viele Kilometer zurück?', 
@@ -486,7 +487,7 @@ var questions =
             correct : 'Rund 40.070 km' , 
             difficulty : 'medium'  ,
             Kennung : '58' } ,
-      {
+            {
             type : 'mc' , 
             questionType: 'AllgemeinWissen' ,
             question : 'Wer oder was ist eine “Druidin”?', 
@@ -494,7 +495,7 @@ var questions =
             correct : 'Eine Priesterin oder Zauberin der keltischen Religion' , 
             difficulty : 'medium'  ,
             Kennung : '59' } ,
-      {
+            {
             type : 'mc' , 
             questionType: 'Biologie' ,
             question : 'Mit welcher Tiergruppe sind die Dinosaurier am engsten verwandt?', 
@@ -502,7 +503,7 @@ var questions =
             correct : 'Vögeln' , 
             difficulty : 'hard'  ,
             Kennung : '60' } ,
-      {
+            {
             type : 'mc' , 
             questionType: 'AllgemeinWissen' ,
             question : 'Was meinen Weinkenner, wenn sie das Wort “rassig” verwenden?', 
@@ -510,7 +511,7 @@ var questions =
             correct : 'Es beschreibt Weine mit einer ausgeglichenen, aber ausgeprägten Säure.' , 
             difficulty : 'hard'  ,
             Kennung : '61' } ,
-      {
+            {
             type : 'mc' , 
             questionType: 'Chemie' ,
             question : 'Welches Metall leitet Wärme am besten?', 
@@ -518,7 +519,7 @@ var questions =
             correct : 'Silber' , 
             difficulty : 'medium'  ,
             Kennung : '62' } ,
-      {
+            {
             type : 'mc' , 
             questionType: 'AllgemeinWissen' ,
             question : 'Wo herrscht kein Linksverkehr?', 
@@ -526,38 +527,49 @@ var questions =
             correct : 'Island' , 
             difficulty : 'hard'  ,
             Kennung : '63' } ,
-      /* {
-            type : 'mc' , 
-            questionType: '' ,
-            question : '', 
-            choices : [ '', '','', ''],
-            correct : '' , 
-            difficulty : ''  ,
-            Kennung : '64' } ,
+
       {
-            type : 'mc' , 
-            questionType: '' ,
-            question : '', 
-            choices : [ '', '','', ''],
-            correct : '' , 
-            difficulty : ''  ,
-            Kennung : '59' } ,
+      type : 'pq' , 
+      questionType: 'Mathe' ,
+      question : 'welche der Funktionen ist "f(x)=-0,5+3"',
+      image : "img/FunktionFrage1.png" , 
+      choices : [ 'A', 'B','C', 'D'],
+      correct : 'Ja' , 
+      difficulty : 'hard'  ,
+      Kennung : '26',
+      prüfungsrelevant: true},
       {
-            type : 'mc' , 
-            questionType: '' ,
-            question : '', 
-            choices : [ '', '','', ''],
-            correct : '' , 
-            difficulty : ''  ,
-            Kennung : '59' } ,
+      type : 'pq' , 
+      questionType: 'Mathe' ,
+      question : 'welche der Funktionen ist "f(x)=-0,5+3"',
+      image : "img/FunktionFrage1.png" , 
+      choices : [ 'A', 'B','C', 'D'],
+      correct : 'Ja' , 
+      difficulty : 'hard'  ,
+      Kennung : '26',
+      prüfungsrelevant: true},
       {
-            type : 'mc' , 
-            questionType: '' ,
-            question : '', 
-            choices : [ '', '','', ''],
-            correct : '' , 
-            difficulty : ''  ,
-            Kennung : '59' } ,
-             */
+      type : 'pq' , 
+      questionType: 'Mathe' ,
+      question : 'welche der Funktionen ist "f(x)=-0,5+3"',
+      image : "img/FunktionFrage1.png" , 
+      choices : [ 'A', 'B','C', 'D'],
+      correct : 'Ja' , 
+      difficulty : 'hard'  ,
+      Kennung : '26',
+      prüfungsrelevant: true},
+      {
+      type : 'pq' , 
+      questionType: 'Mathe' ,
+      question : 'welche der Funktionen ist "f(x)=-0,5+3"',
+      image : "img/FunktionFrage1.png" , 
+      choices : [ 'A', 'B','C', 'D'],
+      correct : 'Ja' , 
+      difficulty : 'hard'  ,
+      Kennung : '26',
+      prüfungsrelevant: true},
+
+      
+
 
 ];
