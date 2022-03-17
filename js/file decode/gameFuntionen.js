@@ -208,9 +208,7 @@ function insideBuilder() {
                 
                 allButtons[i].addEventListener("click", checkForPoints);
             }
-
             
-
             break;
 
 

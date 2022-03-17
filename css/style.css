@@ -152,7 +152,26 @@ header#Main { position: relative; }
 
 }
 
-.MenüButton{
+#lessonbox {
+    margin-top: -3em;
+    display: flex;
+    justify-content: space-evenly;
+
+    
+}
+#lessonbox > *{
+    flex-basis: 50%;
+    flex-grow: 0;
+    margin-top: 1em;
+    padding: 0.4em;
+}
+#lessonbox #Fächer,#lessonbox #prüfungsButton{
+    margin-top: 3.4em;
+    flex-basis: 0 !important;
+    flex-grow: 0 !important;
+}
+
+.MenüButton {
     margin-inline: 0.7em;
     border: solid rgba(0, 0, 0, 0.616) 2px;
     border-radius: 15px;

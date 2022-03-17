@@ -62,6 +62,7 @@ function lessonBoxButtonBuilder(lesson) {
         uniqeFächer();
         for (let i = 0; i< uniqeFachArray.length ; i++) {
             div.appendChild( lessonButtonBuilder(uniqeFachArray[i]) );
+
         }
         });
     return button;
@@ -70,10 +71,11 @@ function lessonBoxButtonBuilder(lesson) {
 function lessonButtonBuilder(lesson) {
     prüfungsrelevant = false;
     let button = document.createElement("button");
-    Object.entries( { id : lesson , class : 'MenüButton button-style-extend' } ).forEach( ( [ key , value ] ) => button.setAttribute( key , value ) );
+    Object.entries( { id : lesson , class : 'MenüButton button-style-extend ' + lesson } ).forEach( ( [ key , value ] ) => button.setAttribute( key , value ) );
     button.innerText = lesson;
     button.addEventListener("click" , () => {
         fach = button.innerText;
+    
         startBoxBuilder();
         
 
