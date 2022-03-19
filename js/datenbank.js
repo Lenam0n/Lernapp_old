@@ -652,49 +652,49 @@ const questions =
             difficulty : 'hard'  ,
             Kennung : '63' } ,
 
-      {
-      type : 'pq' , 
-      questionType: 'Mathe' ,
-      question : 'welche der Funktionen ist "f(x)=-0,5+3"',
-      image : "img/FunktionFrage1.png" , 
-      choices : [ 'A', 'B','C', 'D'],
-      correct : 'Ja' , 
-      difficulty : 'hard'  ,
-      Kennung : '26',
-      prüfungsrelevant: true},
-      {
-      type : 'pq' , 
-      questionType: 'Mathe' ,
-      question : 'welche der Funktionen ist "f(x)=-0,5+3"',
-      image : "img/FunktionFrage1.png" , 
-      choices : [ 'A', 'B','C', 'D'],
-      correct : 'Ja' , 
-      difficulty : 'hard'  ,
-      Kennung : '26',
-      prüfungsrelevant: true},
-      {
-      type : 'pq' , 
-      questionType: 'Mathe' ,
-      question : 'welche der Funktionen ist "f(x)=-0,5+3"',
-      image : "img/FunktionFrage1.png" , 
-      choices : [ 'A', 'B','C', 'D'],
-      correct : 'Ja' , 
-      difficulty : 'hard'  ,
-      Kennung : '26',
-      prüfungsrelevant: true},
-      {
-      type : 'pq' , 
-      questionType: 'Mathe' ,
-      question : 'welche der Funktionen ist "f(x)=-0,5+3"',
-      image : "img/FunktionFrage1.png" , 
-      choices : [ 'A', 'B','C', 'D'],
-      correct : 'Ja' , 
-      difficulty : 'hard'  ,
-      Kennung : '26',
-      prüfungsrelevant: true},
-
-      
-
+            {
+            type : 'pq' , 
+            questionType: 'Mathe' ,
+            question : 'welche der Funktionen ist "f(x)= -2x-4"',
+            image : "img/FunktionFrage1.png" , 
+            choices : [ 'A', 'B','C', 'D'],
+            correct : 'A' , 
+            difficulty : 'hard'  ,
+            Kennung : '26',
+            prüfungsrelevant: true},
+            {
+            type : 'pq' , 
+            questionType: 'Mathe' ,
+            question : 'welche der Funktionen ist "f(x)= 4x+-6"',
+            image : "img/FunktionFrage1.png" , 
+            choices : [ 'A', 'B','C', 'D'],
+            correct : 'B' , 
+            difficulty : 'hard'  ,
+            Kennung : '26',
+            prüfungsrelevant: true},
+            {
+            type : 'pq' , 
+            questionType: 'Mathe' ,
+            question : 'welche der Funktionen ist "f(x)= 0,5x+1"',
+            image : "img/FunktionFrage1.png" , 
+            choices : [ 'A', 'B','C', 'D'],
+            correct : 'C' , 
+            difficulty : 'hard'  ,
+            Kennung : '26',
+            prüfungsrelevant: true},
+            {
+            type : 'pq' , 
+            questionType: 'Mathe' ,
+            question : 'welche der Funktionen ist "f(x)= -0,25x+2"',
+            image : "img/FunktionFrage1.png" , 
+            choices : [ 'A', 'B','C', 'D'],
+            correct : 'D' , 
+            difficulty : 'hard'  ,
+            Kennung : '26',
+            prüfungsrelevant: true},
+                              
+                              
+                              
 
 ];
 
