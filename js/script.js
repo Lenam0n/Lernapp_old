@@ -521,6 +521,7 @@ function insideBuilder() {
             img.src = sortedArray[0].image;
             img.setAttribute('class', 'questionImage')
             section.appendChild(Snddiv);
+            Snddiv.setAttribute('class', 'TransformableDiv')
             Snddiv.appendChild(img);
 
             
