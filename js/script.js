@@ -300,10 +300,10 @@ function checkForPoints(event) {
     if (targetVal == sortedArray[0].correct){
         if (prüfungsrelevant === false) {
             if (dif == 'leicht') {
-                score += 5;
+                score += 10;
             }
             if (dif == 'medium') {
-                score += 10;
+                score += 15;
             }
             if (dif == 'hard') {
                 score += 20;
@@ -378,7 +378,7 @@ function inputBuilder() {
 
 function insideBuilder() {
     if (section.hasChildNodes()) deleteTransformDiv();
-    if (questions.length === 0 && prüfungsrelevant === false || fragencounter === 10 && prüfungsrelevant === false) { 
+    if (sortedArray.length === 0 || fragencounter === 10 && prüfungsrelevant === false ) { 
                 
         document.getElementById("question-gerne").style["opacity"] = 0;
         questionGerne.innerText = "";
@@ -616,7 +616,10 @@ function RestartGameButtonBuilder() {
     button.setAttribute("class","center button-style-3");
     button.setAttribute("id","refreshable");
     button.innerText ="Restart";
-    button.setAttribute("onclick","restartGame()");
+    button.addEventListener('click',()=>{
+        restartGame();
+        this.remove;
+    })
     return button;
 }
 

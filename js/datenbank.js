@@ -211,8 +211,7 @@ const questions =
             choices : [ 'Ja', 'Nein'],
             correct : 'Nein' , 
             difficulty : 'medium'  ,
-            Kennung : '25',
-            prüfungsrelevant: true} , 
+            Kennung : '25'} , 
             {
             type : 'mc' , 
             questionType: 'AllgemeinWissen' ,
