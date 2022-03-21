@@ -56,7 +56,7 @@ function deleteTextAreas(uniqueDeleteClass) {
 
 function deleteTransformDiv() {
     var el = document.getElementsByClassName("TransformableDiv")[0];
-    if (el.id = "antworten-tf" || "antworten-mc" || "antworten-gq" || "startBox") el.remove();
+    if (el.id = "antworten-tf" || "antworten-mc" || "antworten-gq" || "antworten-pq" || "startBox") el.remove();
 }
 
 function LoadMyJs(scriptName) {
@@ -378,7 +378,7 @@ function inputBuilder() {
 
 function insideBuilder() {
     if (section.hasChildNodes()) deleteTransformDiv();
-    if (sortedArray.length === 0 || fragencounter === 10 && prüfungsrelevant === false ) { 
+    if (sortedArray.length == 0 || fragencounter === 10 && prüfungsrelevant === false ) { 
                 
         document.getElementById("question-gerne").style["opacity"] = 0;
         questionGerne.innerText = "";
@@ -387,6 +387,7 @@ function insideBuilder() {
         var div = document.createElement("div");
         Object.entries( { id : 'gameOverScreen' , class : 'TransformableDiv gameover center' } ).forEach( ( [ key , value ] ) => div.setAttribute( key , value ) );
         section.appendChild(div);
+        deleteTransformDiv();
         div.appendChild( RestartGameButtonBuilder() );
         upperText.appendChild(gameOverTextBuilder());
         upperText.appendChild(gameOverScoreTextBuilder());
