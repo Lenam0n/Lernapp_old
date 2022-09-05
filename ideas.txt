@@ -1,2 +1,5 @@
 wrongAnswer 
     -> text ausloggen
+
+
+nur 5 falsche fragen und danach weiter auf nächste seite klicken
