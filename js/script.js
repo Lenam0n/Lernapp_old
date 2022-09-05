@@ -25,6 +25,7 @@ var fach;
 var fächerAbfrage = false;
 var prüfungsrelevant = false;
 var wrongAnswer;
+var wrongAnswerArray = {};
 
 /*
 *
@@ -54,9 +55,9 @@ function deleteTextAreas(uniqueDeleteClass) {
         uniqueDeleteClass[i].remove();}
     }
 
-function deleteTransformDiv() {
+function deleteTransformDiv(a) {
     var el = document.getElementsByClassName("TransformableDiv")[0];
-    if (el.id = "antworten-tf" || "antworten-mc" || "antworten-gq" || "antworten-pq" || "startBox") el.remove();
+    if (el.id = a ||"antworten-tf" || "antworten-mc" || "antworten-gq" || "antworten-pq" || "startBox"|| "reStartBox") el.remove();
 }
 
 function LoadMyJs(scriptName) {
@@ -336,10 +337,11 @@ function checkForPoints(event) {
         fragencounter += 1;  
         punkte.innerText = score;
         fragencount.innerText = fragencounter;
-        alert('falsche Aussage!');  
-
         wrongAnswer = sortedArray.shift();
-        console.log(wrongAnswer.question);
+        wrongAnswerArray[wrongAnswer.question] = wrongAnswer.correct ;
+        console.log(wrongAnswerArray);
+        alert('falsche Antwort!' + '\n \nDie richige Antwort wäre:     ' + wrongAnswer.correct);  
+
 
         insideBuilder();  
     }
@@ -378,17 +380,21 @@ function inputBuilder() {
 
 function insideBuilder() {
     if (section.hasChildNodes()) deleteTransformDiv();
-    if (sortedArray.length == 0 || fragencounter === 10 && prüfungsrelevant === false ) { 
-                
+    if (fragencounter === 10 && prüfungsrelevant === false || sortedArray.length === 0) { 
+        
         document.getElementById("question-gerne").style["opacity"] = 0;
         questionGerne.innerText = "";
         question.innerText = "";
-        
+
+        if(section.querySelector("#antworten-pq") != null){
+            deleteTransformDiv('antworten-pq');
+        }
+
+
         var div = document.createElement("div");
         Object.entries( { id : 'gameOverScreen' , class : 'TransformableDiv gameover center' } ).forEach( ( [ key , value ] ) => div.setAttribute( key , value ) );
         section.appendChild(div);
-        deleteTransformDiv();
-        div.appendChild( RestartGameButtonBuilder() );
+        div.appendChild(RestartGameButtonBuilder());
         upperText.appendChild(gameOverTextBuilder());
         upperText.appendChild(gameOverScoreTextBuilder());
         upperText.style["flex-direction"] = "column";
