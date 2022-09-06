@@ -624,6 +624,7 @@ function RestartGameButtonBuilder() {
     button.setAttribute("id","refreshable");
     button.innerText ="Restart";
     button.addEventListener('click',()=>{
+        wrongAnswerArray = {};
         restartGame();
         this.remove;
     })
