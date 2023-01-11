@@ -340,7 +340,13 @@ function checkForPoints(event) {
         wrongAnswer = sortedArray.shift();
         wrongAnswerArray[wrongAnswer.question] = wrongAnswer.correct ;
         console.log(wrongAnswerArray);
-        alert('falsche Antwort!' + '\n \nDie richige Antwort wäre:     ' + wrongAnswer.correct);  
+
+        if(wrongAnswer.warumRichtig != ''){
+            alert('falsche Antwort!' + '\n \nDie richige Antwort wäre:     ' + wrongAnswer.correct + '\n \n' + wrongAnswer.warumRichtig);  
+        }else{
+           alert('falsche Antwort!' + '\n \nDie richige Antwort wäre:     ' + wrongAnswer.correct);
+        }
+
 
 
         insideBuilder();  
