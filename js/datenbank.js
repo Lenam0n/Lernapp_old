@@ -1004,7 +1004,7 @@ const questions =
             ID : '',
             prüfungsrelevant: true},
 
-            //Aufgabe 1,2,4
+            //Aufgabe 1,2,4,7,9,11
                               
 ];
 
