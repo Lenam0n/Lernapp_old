@@ -170,15 +170,6 @@ const questions =
             {
             type : 'mc' , 
             questionType: 'Nawi' ,
-            question : 'Wie viele Planeten hat unser Sonnensystem?' , 
-            choices : [ '6' , '7' , '8' , '9' ] , 
-            correct : '8' , 
-            difficulty : 'leicht'  ,
-            ID : '20',
-            prüfungsrelevant: false  } ,
-            {
-            type : 'mc' , 
-            questionType: 'Nawi' ,
             question : 'Wie viel Blut sind durchschnittlich im menschlichen Körper?' , 
             choices : [ 'bis zu 3 Liter' , '5 bis 6 Liter' , '8 bis 10 Liter' , '12 bis 14 Liter' ] , 
             correct : '5 bis 6 Liter' , 
@@ -194,14 +185,6 @@ const questions =
             difficulty : ''  ,
             ID : '21',
             prüfungsrelevant: false  } ,
-            {
-            type : 'mc' , 
-            questionType: 'Nawi' ,
-            question : 'Welche Rechtschreibung ist korrekt?' , 
-            choices : [ 'Akupunktur' , 'Akkupunktur' , 'Ackupunktur' , 'Akupuncktur' ] , 
-            correct : 'Akupunktur'  , 
-            difficulty : 'medium'  ,
-            ID : '21' } ,
             {
             type : 'mc' , 
             questionType: 'AllgemeinWissen' ,
@@ -376,7 +359,8 @@ const questions =
             choices : [ '64 Jahre' , '82 Jahre' , '30 Jahre' , '50 Jahre' ] , 
             correct : '64 Jahre' , 
             difficulty : 'medium'  ,
-            ID : '41' } ,
+            ID : '41',
+            prüfungsrelevant: false } ,
 { 
             type : 'mc' , 
             questionType: 'AllgemeinWissen' ,
@@ -420,7 +404,7 @@ const questions =
             choices : [ 'Power plant', 'Photo power plant','Hydroelectric power plant', 'Real estate'],
             correct : 'Power plant' , 
             difficulty : 'medium'  ,
-            ID : '30',
+            ID : '46',
             prüfungsrelevant: false  } , 
             {
             type : 'mc' , 
@@ -429,16 +413,7 @@ const questions =
             choices : [ 'Elektromagnetische Wellen', 'Elektromagnetische Strömung','Antischall', 'Antikal'],
             correct : 'Antischall' , 
             difficulty : 'medium'  ,
-            ID : '31',
-            prüfungsrelevant: false  } , 
-            {
-            type : 'mc' , 
-            questionType: 'Mathe' ,
-            question : 'Berechne die maximale Ladung, die in dem Kondensator eines Defibrillators gespeichert werden kann, bei einer Kapazität von 0.00005 Farad und einer Maximalspannung von 4000 Volt', 
-            choices : [ '0,2 C', '0,2 F','0,2 V', '42'],
-            correct : '0,2 C' , 
-            difficulty : 'hard'  ,
-            ID : '32',
+            ID : '47',
             prüfungsrelevant: false  } , 
             {
             type : 'mc' , 
@@ -447,7 +422,7 @@ const questions =
             choices : [ 'Schwefeldioxid', 'Kohlensäure','Kaliumpermanganat', 'Calciumchlorid'],
             correct : 'Calciumchlorid' , 
             difficulty : 'hard'  ,
-            ID : '33',
+            ID : '48',
             prüfungsrelevant: false  } , 
             {
             type : 'mc' , 
@@ -456,7 +431,7 @@ const questions =
             choices : [ 'Wasserstoff', 'Ammoniak','Harnstoff', 'Aluminiumsilikat'],
             correct : 'Ammoniak' , 
             difficulty : 'hard'  ,
-            ID : '34',
+            ID : '49',
             prüfungsrelevant: false  } , 
             {
             type : 'tf' , 
@@ -465,7 +440,7 @@ const questions =
             choices : [ 'Wahr', 'Falsch'],
             correct : 'Wahr' , 
             difficulty : 'medium'  ,
-            ID : '35',
+            ID : '50',
             prüfungsrelevant: false  } , 
             {
             type : 'tf' , 
@@ -474,7 +449,7 @@ const questions =
             choices : [ 'Ja', 'Nein'],
             correct : 'Nein' , 
             difficulty : 'medium'  ,
-            ID : '36',
+            ID : '51',
             prüfungsrelevant: false  } , 
             {
             type : 'tf' , 
@@ -483,7 +458,7 @@ const questions =
             choices : [ 'Ja', 'Nein'],
             correct : 'Ja' , 
             difficulty : 'medium'  ,
-            ID : '37',
+            ID : '52',
             prüfungsrelevant: false  } , 
             {
             type : 'tf' , 
@@ -492,7 +467,7 @@ const questions =
             choices : [ 'Ja', 'Nein'],
             correct : 'Ja' , 
             difficulty : 'medium'  ,
-            ID : '38',
+            ID : '53',
             prüfungsrelevant: false  } ,
             {
             type : 'tf' , 
@@ -501,7 +476,7 @@ const questions =
             choices : [ 'Ja', 'Nein'],
             correct : 'Ja' , 
             difficulty : 'medium'  ,
-            ID : '39',
+            ID : '54',
             prüfungsrelevant: false  } ,
             {
             type : 'tf' , 
@@ -510,7 +485,7 @@ const questions =
             choices : [ 'Ja', 'Nein'],
             correct : 'Ja' , 
             difficulty : 'medium'  ,
-            ID : '40',
+            ID : '55',
             prüfungsrelevant: false  } ,
             {
             type : 'tf' , 
@@ -519,7 +494,7 @@ const questions =
             choices : [ 'Ja', 'Nein'],
             correct : 'Nein' , 
             difficulty : 'medium'  ,
-            ID : '41',
+            ID : '56',
             prüfungsrelevant: false  } ,
             {
             type : 'tf' , 
@@ -528,7 +503,7 @@ const questions =
             choices : [ 'Ja', 'Nein'],
             correct : 'Ja' , 
             difficulty : 'medium'  ,
-            ID : '42',
+            ID : '57',
             prüfungsrelevant: false  } ,
             {
             type : 'tf' , 
@@ -537,7 +512,7 @@ const questions =
             choices : [ 'eine Stoffgruppe der gesättigten Kohlenwasserstoffe', 'eine Stoffgruppe der ungesättigten Kohlenwasserstoffe'],
             correct : 'eine Stoffgruppe der gesättigten Kohlenwasserstoffe' , 
             difficulty : 'medium'  ,
-            ID : '43',
+            ID : '58',
             prüfungsrelevant: false  } ,
             {
             type : 'mc' , 
@@ -546,7 +521,7 @@ const questions =
             choices : [ '...hier Religionsfreiheit gilt.', '...die Menschen Steuern zahlen.','...hier Meinungsfreiheit gilt.', '...die Menschen das Wahlrecht haben.'],
             correct : '...hier Meinungsfreiheit gilt.' , 
             difficulty : 'leicht'  ,
-            ID : '44',
+            ID : '59',
             prüfungsrelevant: false  } ,
             {
             type : 'mc' , 
@@ -555,7 +530,7 @@ const questions =
             choices : [ '...Geschichtsunterricht teilnehmen soll.' , '...Religionsunterricht teilnehmen soll.' , '...Politikunterricht teilnehmen soll', '...Sprachunterricht teilnehmen soll'],
             correct : '...Religionsunterricht teilnehmen soll.' , 
             difficulty : 'leicht'  ,
-            ID : '45',
+            ID : '60',
             prüfungsrelevant: false  } ,
             {
             type : 'mc' , 
@@ -564,7 +539,7 @@ const questions =
             choices : [ 'Die Gerichte machen die Gesetze', 'Nur Deutsche müssen die Gesetze befolgen.','Der Staat muss sich nicht an die Gesetze halten.', 'Alle Einwohner / Einwohnerinnen und der Staat müssen sich an die Gesetze halten.'],
             correct : 'Alle Einwohner / Einwohnerinnen und der Staat müssen sich an die Gesetze halten.' , 
             difficulty : 'leicht'  ,
-            ID : '46',
+            ID : '61',
             prüfungsrelevant: false  } ,
             {
             type : 'mc' , 
@@ -573,7 +548,7 @@ const questions =
             choices : [ 'Nach dem heutigen Wissensstand stammen sämtliche Hunde vom Wolf ab.', 'Nach dem heutigen Wissensstand stammen sämtliche Hunde vom Wolf ab.','Hunde sind typische Einzelgänger.', 'Mischlinge sind erheblich gesünder als Rassehunde.'],
             correct : 'Nach dem heutigen Wissensstand stammen sämtliche Hunde vom Wolf ab.' , 
             difficulty : 'leicht'  ,
-            ID : '47',
+            ID : '62',
             prüfungsrelevant: false  } ,
             {
             type : 'mc' , 
@@ -582,18 +557,8 @@ const questions =
             choices : [ 'Hunde verständigen sich unter einander vorwiegend durch Lautäußerungen.', 'Hunde verständigen sich durch Körpersprache.','Für die Verständigung spielt auch die Mimik eine große Rolle.', 'Auch die Haltung des Schwanzes ist ein sicherer Stimmungsanzeiger.'],
             correct : 'Hunde verständigen sich unter einander vorwiegend durch Lautäußerungen.' , 
             difficulty : 'medium'  ,
-            ID : '48',
+            ID : '63',
             prüfungsrelevant: false  } ,
-            
-            /*             {
-            type : 'mc' , 
-            questionType: '' ,
-            question : '', 
-            choices : [ '', '','', ''],
-            correct : '' , 
-            difficulty : 'medium'  ,
-            ID : '' } ,  */
-
             {
             type : 'mc' , 
             questionType: 'Erdkunde' ,
@@ -601,7 +566,7 @@ const questions =
             choices : [ 'Berlin', 'Bremen','Saarland', 'Hamburg'],
             correct : 'Bremen' , 
             difficulty : 'leicht'  ,
-            ID : '49',
+            ID : '64',
             prüfungsrelevant: false  } ,
             {
             type : 'mc' , 
@@ -610,7 +575,7 @@ const questions =
             choices : [ 'Genieße das Leben', 'Nutze den Tag','Dein Tag wird toll werden', 'Man sieht sich immer zweimal im Leben'],
             correct : 'Nutze den Tag' , 
             difficulty : 'hard'  ,
-            ID : '50',
+            ID : '65',
             prüfungsrelevant: false  } ,
             {
             type : 'mc' , 
@@ -619,7 +584,7 @@ const questions =
             choices : [ 'Ein Preis für die schlechteste Leistung innerhalb eines Filmjahres', 'Eine Nachspeise aus Russland','Das teuerste Schmuckstück der Welt', 'Das Symbol einer Sekte'],
             correct : 'Ein Preis für die schlechteste Leistung innerhalb eines Filmjahres' , 
             difficulty : 'hard'  ,
-            ID : '51',
+            ID : '66',
             prüfungsrelevant: false  } ,
             {
             type : 'mc' , 
@@ -628,7 +593,7 @@ const questions =
             choices : [ 'Friedrich der I. von Preußen', 'Friedrich der III. von Sachsen','Friedrich II. von Preußen', 'Friedrich der III. von Österreich'],
             correct : 'Friedrich II. von Preußen' , 
             difficulty : 'hard'  ,
-            ID : '52',
+            ID : '67',
             prüfungsrelevant: false  } ,
             {
             type : 'mc' , 
@@ -637,7 +602,7 @@ const questions =
             choices : [ 'Der Fliegenpilz', 'Der Satansröhrling','Der Gemeine Kartoffelbovist', 'Der Grüne Knollenblätterpilz'],
             correct : 'Der Grüne Knollenblätterpilz' , 
             difficulty : 'medium'  ,
-            ID : '53',
+            ID : '68',
             prüfungsrelevant: false  } ,
             {
             type : 'mc' , 
@@ -646,7 +611,8 @@ const questions =
             choices : [ 'Schwarz', 'Weiß','Braun', 'Rot'],
             correct : 'Rot' , 
             difficulty : 'leicht'  ,
-            ID : '54' } ,
+            ID : '69',
+            prüfungsrelevant: false } ,
             {
             type : 'mc' , 
             questionType: 'AllgemeinWissen' ,
@@ -654,7 +620,7 @@ const questions =
             choices : [ 'Gourmet', 'Gourmed','Genießer', 'Gourmeht'],
             correct : 'Gourmet' , 
             difficulty : 'leicht'  ,
-            ID : '55',
+            ID : '70',
             prüfungsrelevant: false  } ,
             {
             type : 'mc' , 
@@ -663,7 +629,7 @@ const questions =
             choices : [ 'Gran Canaria', 'Cabrera','Formentera', 'Ibiza'],
             correct : 'Gran Canaria' , 
             difficulty : 'medium'  ,
-            ID : '56',
+            ID : '71',
             prüfungsrelevant: false  } ,
             {
             type : 'mc' , 
@@ -672,7 +638,7 @@ const questions =
             choices : [ 'Timothy Dalton', 'Daniel Craig','Javier Bardem', 'Leonardo DiCaprio'],
             correct : 'Leonardo DiCaprio' , 
             difficulty : 'hard'  ,
-            ID : '57',
+            ID : '72',
             prüfungsrelevant: false  } ,
             {
             type : 'mc' , 
@@ -681,7 +647,7 @@ const questions =
             choices : [ 'Rund 40.070 km', 'Rund 30.070 km','Rund 60.070 km', 'Rund 80.070 km'],
             correct : 'Rund 40.070 km' , 
             difficulty : 'medium'  ,
-            ID : '58',
+            ID : '73',
             prüfungsrelevant: false  } ,
             {
             type : 'mc' , 
@@ -690,7 +656,7 @@ const questions =
             choices : [ 'Eine Kräutersammlerin im Harz', 'Eine Priesterin oder Zauberin der keltischen Religion','Ein Magnetfeld', 'Eine Hunderasse aus China'],
             correct : 'Eine Priesterin oder Zauberin der keltischen Religion' , 
             difficulty : 'medium'  ,
-            ID : '59',
+            ID : '74',
             prüfungsrelevant: false  } ,
             {
             type : 'mc' , 
@@ -699,7 +665,7 @@ const questions =
             choices : [ 'Vögeln', 'Eidechsen','Affen', 'Alligatoren'],
             correct : 'Vögeln' , 
             difficulty : 'hard'  ,
-            ID : '60',
+            ID : '75',
             prüfungsrelevant: false  } ,
             {
             type : 'mc' , 
@@ -708,7 +674,7 @@ const questions =
             choices : [ 'Es beschreibt Weine, die im Geschmack an frisches Obst erinnern.', 'Es beschreibt Weine mit einer ausgeglichenen, aber ausgeprägten Säure.','Es beschreibt alkohol- und körperreiche Weine.', 'Es beschreibt Weine mit vielen Duftstoffen.'],
             correct : 'Es beschreibt Weine mit einer ausgeglichenen, aber ausgeprägten Säure.' , 
             difficulty : 'hard'  ,
-            ID : '61',
+            ID : '76',
             prüfungsrelevant: false  } ,
             {
             type : 'mc' , 
@@ -717,7 +683,7 @@ const questions =
             choices : [ 'Aluminium', 'Gold','Kupfer', 'Silber'],
             correct : 'Silber' , 
             difficulty : 'medium'  ,
-            ID : '62',
+            ID : '77',
             prüfungsrelevant: false  } ,
             {
             type : 'mc' , 
@@ -726,7 +692,7 @@ const questions =
             choices : [ 'Irland', 'Indien','Island', 'Großbritannien'],
             correct : 'Island' , 
             difficulty : 'hard'  ,
-            ID : '63',
+            ID : '78',
             prüfungsrelevant: false } ,
 
             {
@@ -737,7 +703,7 @@ const questions =
             choices : [ 'A', 'B','C', 'D'],
             correct : 'A' , 
             difficulty : 'hard'  ,
-            ID : '64',
+            ID : '79',
             prüfungsrelevant: false},
             {
             type : 'pq' , 
@@ -747,7 +713,7 @@ const questions =
             choices : [ 'A', 'B','C', 'D'],
             correct : 'B' , 
             difficulty : 'hard'  ,
-            ID : '65',
+            ID : '80',
             prüfungsrelevant: false},
             {
             type : 'pq' , 
@@ -757,7 +723,7 @@ const questions =
             choices : [ 'A', 'B','C', 'D'],
             correct : 'C' , 
             difficulty : 'hard'  ,
-            ID : '66',
+            ID : '81',
             prüfungsrelevant: false},
             {
             type : 'pq' , 
@@ -767,7 +733,7 @@ const questions =
             choices : [ 'A', 'B','C', 'D'],
             correct : 'D' , 
             difficulty : 'hard'  ,
-            ID : '67',
+            ID : '82',
             prüfungsrelevant: false},
             {
             type : 'pq' , 
@@ -777,7 +743,7 @@ const questions =
             choices : [ 'J', 'H','F', 'G'],
             correct : 'H' , 
             difficulty : 'hard'  ,
-            ID : '68',
+            ID : '83',
             prüfungsrelevant: false},
             {
             type : 'pq' , 
@@ -787,7 +753,7 @@ const questions =
             choices : [ 'J', 'H','F', 'G'],
             correct : 'J' , 
             difficulty : 'hard'  ,
-            ID : '69',
+            ID : '84',
             prüfungsrelevant: false},
             {
             type : 'pq' , 
@@ -797,7 +763,7 @@ const questions =
             choices : [ 'J', 'H','F', 'G'],
             correct : 'F' , 
             difficulty : 'hard'  ,
-            ID : '70',
+            ID : '85',
             prüfungsrelevant: false},
             {
             type : 'pq' , 
@@ -807,7 +773,7 @@ const questions =
             choices : [ 'J', 'H','F', 'G'],
             correct : 'G' , 
             difficulty : 'hard'  ,
-            ID : '71',
+            ID : '86',
             prüfungsrelevant: false},
             {
             type : 'mc' , 
@@ -816,7 +782,7 @@ const questions =
             choices : [ 'N2O5 ----> 4 NO2 + O2', '2 N2(g) + 3 H2(g) ----> 2 NH3(g)','2 Fe +O2 + H2O -----> 2 Fe2(OH)2', '2 H2O2 ---> 2 H2O + O2'],
             correct : '2 H2O2 ---> 2 H2O + O2' , 
             difficulty : 'hard'  ,
-            ID : '71',
+            ID : '87',
             prüfungsrelevant: false},
             {
             type : 'mc' , 
@@ -825,7 +791,7 @@ const questions =
             choices : [ 'Stalagtiten','Formosantermiten','Stalagmiten','Kesselstein'],
             correct : 'Stalagtiten' , 
             difficulty : 'hard'  ,
-            ID : '71',
+            ID : '88',
             prüfungsrelevant: false},
             {
             type : 'mc' , 
@@ -834,7 +800,7 @@ const questions =
             choices : [ 'Der Stickstoff verbindet sich mit dem Wasserstoff.','Der Stickstoff verbindet sich mit dem Iod.','nichts','Die Reaktion verläuft verstärkt nach rechts.'],
             correct : 'nichts' , 
             difficulty : 'hard'  ,
-            ID : '71',
+            ID : '89',
             prüfungsrelevant: false},
             {
             type : 'mc' , 
@@ -843,7 +809,7 @@ const questions =
             choices : [ 'nebelig weiß','fest','flüssig','gasförmig'],
             correct : 'gasförmig' , 
             difficulty : 'hard'  ,
-            ID : '71',
+            ID : '90',
             prüfungsrelevant: false},
             {
             type : 'mc' , 
@@ -852,7 +818,7 @@ const questions =
             choices : [ 'immer konstant','eine kleine ganze Zahl','nicht druckabhängig','bei 25°C anders als bei 50°C'],
             correct : 'bei 25°C anders als bei 50°C' , 
             difficulty : 'hard'  ,
-            ID : '71',
+            ID : '91',
             prüfungsrelevant: false},
             {
             type : 'mc' , 
@@ -861,7 +827,7 @@ const questions =
             choices : [ 'Mol/Milliliter','Mol x Liter','Mol/Liter','Gramm/Liter'],
             correct : 'Mol/Liter' , 
             difficulty : 'hard'  ,
-            ID : '71',
+            ID : '92',
             prüfungsrelevant: false},
             {
             type : 'mc' , 
@@ -870,7 +836,7 @@ const questions =
             choices : [ 'ein Verdauungsenzym im Dünndarm, das Proteine spaltet.','eine Protease in der Leber, die Proteine spaltet.','ein Redoxenzym in den Mitochondrien der Leberzellen, das die Oxidation der Aminoäuren katalysiert.','ein Isomeres von Trypsin.'],
             correct : 'ein Verdauungsenzym im Dünndarm, das Proteine spaltet.' , 
             difficulty : 'hard'  ,
-            ID : '71',
+            ID : '93',
             prüfungsrelevant: false},
             {
             type : 'mc' , 
@@ -879,7 +845,7 @@ const questions =
             choices : [ 'Die Katalyse ist ein exothermer Vorgang.','Gleichgewichtsreaktionen sind temperatur-, druck und volumenabhängig.','Übt man auf ein Gleichgewichtssystem einen Zwang aus, so reagiert es, indem sich der Zwang verkleinert.','Wärme fließt immer vom energiereicheren zum ernergieärmeren Medium.'],
             correct : 'Übt man auf ein Gleichgewichtssystem einen Zwang aus, so reagiert es, indem sich der Zwang verkleinert.' , 
             difficulty : 'hard'  ,
-            ID : '71',
+            ID : '94',
             prüfungsrelevant: false},
             {
             type : 'mc' , 
@@ -888,7 +854,7 @@ const questions =
             choices : [ 'Wasserstoffperoxid wird in vielen Industriezweigen als Oxidationsmittel verwendet.','Die Wahrscheinlichkeit des Zusammenstoßens von Teilchen einer Reaktion ist zum Produkt der Reaktanten proportional.','Die Reaktionsgeschwindigkeit ist auch vom Quadrat der Konzentration abhängig.','Wasserstoffperoxid wird in vielen Industriezweigen als Oxidationsmittel verwendet.'],
             correct : 'Die Reaktionsgeschwindigkeit ist auch vom Quadrat der Konzentration abhängig.' , 
             difficulty : 'hard'  ,
-            ID : '',
+            ID : '95',
             prüfungsrelevant: false},
             {
             type : 'mc' , 
@@ -897,7 +863,7 @@ const questions =
             choices : [ 'Die gesamte Bewegungsenergie eines Gases ist dem Quadrat seiner Temperatur proportional.','Die gesamte Bewegungsenergie eines Gases ist seiner Temperatur proportional.','Alle Gase bestehen aus 2-atomigen Molekülen.','Das Volumen eines Gases ist vom Quotient aus Temperatur und Druck abhängig.'],
             correct : 'Die gesamte Bewegungsenergie eines Gases ist seiner Temperatur proportional.' , 
             difficulty : 'hard'  ,
-            ID : '',
+            ID : '96',
             prüfungsrelevant: false},
             { 
             type : 'tf' , 
@@ -906,7 +872,7 @@ const questions =
             choices : [ 'rechtens' , 'nicht rechtens' ] , 
             correct : 'nicht rechtens' , 
             difficulty : ''  ,
-            ID : '',
+            ID : '97',
             prüfungsrelevant: true},
             { 
             type : 'tf' , 
@@ -915,7 +881,7 @@ const questions =
             choices : [ 'rechtens' , 'nicht rechtens' ] , 
             correct : 'nicht rechtens' , 
             difficulty : ''  ,
-            ID : '',
+            ID : '98',
             warumRichtig : 'Kündigungsfrist außerhalb der Probezeit ist 1 Monat',
             prüfungsrelevant: true},
             { 
@@ -925,7 +891,7 @@ const questions =
             choices : [ 'rechtens' , 'nicht rechtens' ] , 
             correct : 'nicht rechtens' , 
             difficulty : ''  ,
-            ID : '',
+            ID : '99',
             prüfungsrelevant: true},
             { 
             type : 'tf' , 
@@ -935,7 +901,7 @@ const questions =
             correct : 'rechtens' , 
             difficulty : ''  ,
             warumRichtig : '',
-            ID : '',
+            ID : '100',
             prüfungsrelevant: true},
             { 
             type : 'tf' , 
@@ -944,44 +910,53 @@ const questions =
             choices : [ 'rechtens' , 'nicht rechtens'  ] , 
             correct : '' , 
             difficulty : ''  ,
-            ID : '',
+            ID : '101',
             prüfungsrelevant: true},
             {
-            type : 'Wirtschaftskunde' ,
-            questionType: 'mc' ,
-            question : 'Wie lange geht die Probzeit' ,
-            choices : [ '1 Jahr' , '4 Monate' , '1 Monat' , '6 Monate' ] ,
-            correct : '4 Monate' ,
+            type : 'mc' ,
+            questionType: 'Wirtschaftskunde' ,
+            question : 'Wie lange darf die Probzeit gehen' ,
+            choices : [ 'maximal 1 Jahr' , 'maximal 4 Monate' , 'maximal 1 Monat' , 'maximal 6 Monate' ] ,
+            correct : 'maximal 4 Monate' ,
             difficulty : ''  ,
-            ID : '',
-            prüfungsrelevant: true },
-            {
-            type : 'Wirtschaftskunde' ,
-            questionType: 'mc' ,
-            question : 'Wieso gibt es eine Probezeit?' ,
-            choices : [ 'Damit der Azubi sich denn Beruf anschauen kann' , 'Dmait der Arbeitgeber seinen Azubi kurz vor ende der Probezeit ohne grund kündigen kann' , 'Damit der Arbeitgeber einschätzen kann ob der Azubi geeignet' , 'A und C' ] ,
-            correct : 'A und C' ,
-            difficulty : ''  ,
-            ID : '',
+            ID : '102',
             prüfungsrelevant: true },
             {
             type : 'mc' ,
             questionType: 'Wirtschaftskunde' ,
-            question : 'We werden die Vertragspartner beim Berufsaus-bildungsvertrag genannt?' ,
-            choices : [ 'Azubi und Auszubildener' , 'Arbeitgeber und Arbeitnehmer' , 'Meister und padawan' , 'Schüler und Lehrer' ] ,
+            question : 'Wie lange muss die Probzeit mindestens gehen' ,
+            choices : [ 'mindestens 1 Jahr' , 'mindestens 4 Monate' , 'mindestens 1 Monat' , 'mindestens 6 Monate' ] ,
+            correct : 'mindestens 1 Monat' ,
+            difficulty : ''  ,
+            ID : '103',
+            prüfungsrelevant: true },
+            {
+            type : 'mc' ,
+            questionType: 'Wirtschaftskunde' ,
+            question : 'Wieso gibt es eine Probezeit?' ,
+            choices : [ 'Damit der Ausbilder sich denn Beruf anschauen kann' , 'Damit der Arbeitgeber seinen Azubi kurz vor Ende der Probezeit ohne grund kündigen kann' , 'Damit der Arbeitgeber einschätzen kann ob der Azubi geeignet' , 'Damit der Ausbilder abschätzen kann wieviel ein Azubi verdient' ] ,
+            correct : 'Damit der Arbeitgeber einschätzen kann ob der Azubi geeignet' ,
+            difficulty : ''  ,
+            ID : '104',
+            prüfungsrelevant: true },
+            {
+            type : 'mc' ,
+            questionType: 'Wirtschaftskunde' ,
+            question : 'We werden die Vertragspartner beim Berufsausbildungsvertrag genannt?' ,
+            choices : [ 'Azubi und Auszubildener' , 'Arbeitgeber und Arbeitnehmer' , 'Meister und Padawan' , 'Schüler und Lehrer' ] ,
             correct : 'Azubi und Auszubildener' ,
             difficulty : ''  ,
-            ID : '',
+            ID : '105',
             warumRichtig : 'du bist dann der auszubildene und der andere ist der der dich ausbildet  ',
             prüfungsrelevant: true},
             {
-            type : '' ,
+            type : 'mc' ,
             questionType: 'Wirtschaftskunde' ,
-            question : 'Die 16 jährige Yasmin erhält einen Ausbildungsvertrag al Kraftfahrzeugmechatronikerin, Wer muss den Ausbildungsvertrag unterschreiben?' ,
-            choices : [ 'Ausbilder und Yasmin' , 'Ausbilder, Yasmin und ein Erziehungsberechtiger' , 'Ausbilder, Yasmin und dein bester Freund' , 'Ausbilder, Yasmin und der Lehrer' ] ,
+            question : 'Die 16 jährige Yasmin erhält einen Ausbildungsvertrag als Kraftfahrzeugmechatronikerin, Wer muss den Ausbildungsvertrag unterschreiben?' ,
+            choices : [ 'Ausbilder und Yasmin' , 'Ausbilder, Yasmin und ein Erziehungsberechtiger' , 'Ausbilder, Yasmin und ihr bester Freund' , 'Ausbilder, Yasmin und ihr Klassenlehrer' ] ,
             correct : 'Ausbilder, Yasmin und ein Erziehungsberechtiger' ,
             difficulty : ''  ,
-            ID : '',
+            ID : '106',
             warumRichtig : 'weil bei einer minderjährigen muss wenigstens ein Elternteil/Erziehungsberechtigter mit unterschreiben',
             prüfungsrelevant: true},
             {
@@ -991,20 +966,119 @@ const questions =
             choices : [ '' , 'damit die Unternehmen die Auszubildenden ausnutzen' , 'damit die Auszubildenden die Unternehmen nicht ausnutzen' , 'damit die Unternehmen die Auszubildenden nicht ausnutzen' ] ,
             correct : 'damit die Unternehmen die Auszubildenden nicht ausnutzen' ,
             difficulty : ''  ,
-            ID : '',
+            ID : '107',
             warumRichtig : '',
             prüfungsrelevant: true },
             {
             type : 'mc' ,
             questionType: 'Wirtschaftskunde' ,
-            question : '' ,
+            question : 'Welche Pflichten erhält man als AZUBI' ,
+            choices : [ 'Lernpflicht, Gehorsamkeit, Fürsorgepflicht' , 'Gesetzliches Wettbewerbsverbot, Gehorsamkeit, Lohn/Vergütung' , 'Lernpflicht, Gesetzliches Wettbewerbsverbot, Gehorsamkeit' , 'Gesetzliches Wettbewerbsverbot, Ausbildungsnachweis führen, Ausbildungspflicht' ] ,
+            correct : 'Lernpflicht, Gesetzliches Wettbewerbsverbot, Gehorsamkeit' ,
+            difficulty : ''  ,
+            ID : '108',
+            prüfungsrelevant: true},
+            {
+            type : 'mc' ,
+            questionType: 'Wirtschaftskunde' ,
+            question : 'Welche Pflichten erhält man als Ausbilder' ,
+            choices : [ 'Lernpflicht, Gehorsamkeit, Fürsorgepflicht' , 'Gehorsamkeit, Lohn/Vergütung, Ausbildungsnachweis führen' , 'Lohn/Vergütung, Ausbildungspflicht, Fürsorgepflicht' , 'Lernpflicht, Ausbildungspflicht, Gehorsamkeit' ] ,
+            correct : 'Lohn/Vergütung, Ausbildungspflicht' ,
+            difficulty : ''  ,
+            ID : '109',
+            prüfungsrelevant: true},
+            {
+            type : 'mc' ,
+            questionType: 'Wirtschaftskunde' ,
+            question : 'Ein Friseur lässt seine Auszubildende im ersten Ausbildungsjahr nur die Haare der Kunden waschen. Gegen welche Pflicht des Ausbildungsvertrags verstößt er damit?' ,
+            choices : [ 'Ausbildungspflicht' , 'Fürsorgepflicht', 'Arbeitspflicht', 'Abwächslungspflicht' ] ,
+            correct : '' ,
+            difficulty : ''  ,
+            ID : '110',
+            prüfungsrelevant: true},
+            {
+            type : 'mc' ,
+            questionType: 'Wirtschaftskunde' ,
+            question : 'Welche Stellen überwachen die Berufsausbildung?' ,
             choices : [ '' , '' , '' , '' ] ,
             correct : '' ,
             difficulty : ''  ,
-            ID : '',
+            ID : '111',
             prüfungsrelevant: true},
+            {
+            type : 'gq' ,
+            questionType: 'Wirtschaftskunde' ,
+            question : 'Nennen Sie die für Ihren Ausbildungsberuf zuständige Stelle.' ,
+            correct : '' ,
+            difficulty : ''  ,
+            ID : '112',
+            prüfungsrelevant: true},
+            {
+            type : 'mc' ,
+            questionType: 'Wirtschaftskunde' ,
+            question : 'Welche Aufgaben haben diese Stellen im Bereich der Berufsbildung?' ,
+            choices : [ '' , '' , '' , '' ] ,
+            correct : '' ,
+            difficulty : ''  ,
+            ID : '113',
+            prüfungsrelevant: true},
+      {
+            type : 'mc' ,
+            questionType: 'Wirtschaftskunde' ,
+            question : 'Welche Gesetze regeln die Berufsausbildung -1' ,
+            choices : [ 'SGB' , 'JArbSchG' , 'StVO' , 'StGB' ] ,
+            correct : 'JArbSchG' ,
+            difficulty : ''  ,
+            ID : '114',
+            prüfungsrelevant: true},
+            {
+            type : 'mc' ,
+            questionType: 'Wirtschaftskunde' ,
+            question : 'Welche Gesetze regeln die Berufsausbildung -2 ' ,
+            choices : [ 'AFRG' , 'AGBG' , 'BBIG' , 'AGB' ] ,
+            correct : 'BBIG' ,
+            difficulty : ''  ,
+            ID : '115',
+            prüfungsrelevant: true},
+            {
+            type : 'mc' ,
+            questionType: 'Wirtschaftskunde' ,
+            question : 'Welche Gesetze regeln die Berufsausbildung -3 ' ,
+            choices : [ 'SGB' , 'StVO' , 'AFRG' , 'Ausbildungsordnung' ] ,
+            correct : 'Ausbildungsordnung' ,
+            difficulty : ''  ,
+            ID : '116',
+            prüfungsrelevant: true},
+      {
+            type : 'mc' , 
+            questionType: 'Nawi' ,
+            question : 'Wie viele Planeten hat unser Sonnensystem?' , 
+            choices : [ '6' , '7' , '8' , '9' ] , 
+            correct : '8' , 
+            difficulty : 'leicht'  ,
+            ID : '117',
+            prüfungsrelevant: false  } ,
+      {
+            type : 'mc' , 
+            questionType: 'Mathe' ,
+            question : 'Berechne die maximale Ladung, die in dem Kondensator eines Defibrillators gespeichert werden kann, bei einer Kapazität von 0.00005 Farad und einer Maximalspannung von 4000 Volt', 
+            choices : [ '0,2 C', '0,2 F','0,2 V', '42'],
+            correct : '0,2 C' , 
+            difficulty : 'hard'  ,
+            ID : '118',
+            prüfungsrelevant: false  } , 
+      {
+            type : 'mc' , 
+            questionType: 'Nawi' ,
+            question : 'Welche Rechtschreibung ist korrekt?' , 
+            choices : [ 'Akupunktur' , 'Akkupunktur' , 'Ackupunktur' , 'Akupuncktur' ] , 
+            correct : 'Akupunktur'  , 
+            difficulty : 'medium'  ,
+            ID : '119',
+            prüfungsrelevant: false } ,
+            
 
-            //Aufgabe 1,2,4,7,9,11
+
                               
 ];
 
